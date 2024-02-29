@@ -7,6 +7,7 @@ public class Showing extends Stage{
     private ArrayList<gLMS> glmss;
     private ArrayList<Question> quess;
     private ArrayList<Notice> notices;
+    private ArrayList<Input> inputs;
     private Data data;
 
     public Showing(String title, String content, Experiment experiment){
@@ -28,6 +29,7 @@ public class Showing extends Stage{
         quess.add(ques);
         Notice notice = new Notice(title,content);
         notices.add(notice);
+        Input input = new Input (title,content);
     }
     public void addStage(int stage){
         Scanner sc = new Scanner(System.in);
@@ -40,8 +42,9 @@ public class Showing extends Stage{
            case 1:
                 addNotice(titleEn, contentEn);
                break;
-//            case 2:
-//                break;
+           case 2:
+            addInput(titleEn, contentEn);
+               break;
 //            case 3:
 //                break;
             case 4:
@@ -58,6 +61,12 @@ public class Showing extends Stage{
         }
     }
 
+    public void addInput(String title, String content){
+        Input temp = new Input(title, content);
+        inputs.add(temp);
+        System.out.println(" Add Input is done");
+      }
+    
     public void addNotice(String title, String content){
         Notice temp = new Notice(title,content);
         notices.add(temp);
@@ -92,9 +101,13 @@ public class Showing extends Stage{
             }
                 
         System.out.println("-----------------------Stage 2: Input Stage----------------------"); // Stag 2:
-        /*
-                QuynhAnh fill
-         */
+        count=0;
+        for(Input input: inputs){
+            if(count>0)
+                System.out.print("Title: " + input.getTitle()+ "\nContent: "+ input.getContent());
+            count++;
+        }
+        
         System.out.println("-----------------------Stage 3: Timer Stage----------------------"); // Stag 3:
         /*
                 QuynhAnh fill
