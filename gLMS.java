@@ -1,12 +1,8 @@
-import java.awt.*;
-
-public abstract class Stage {
-    public String title = "Hungry ?", content = "Level";
-    public Stage(String title, String content) {
-        this.title = title;
-        this.content = content;
+import java.util.ArrayList;
+public class gLMS extends Stage{
+    public gLMS(String title, String content){
+        super(title,content);
     }
-
     public String getTitle() {
         return title;
     }
@@ -23,3 +19,7 @@ public abstract class Stage {
         this.content = content;
     }
 }
+
+
+
+

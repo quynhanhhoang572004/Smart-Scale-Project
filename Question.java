@@ -1,12 +1,7 @@
-import java.awt.*;
-
-public abstract class Stage {
-    public String title = "Hungry ?", content = "Level";
-    public Stage(String title, String content) {
-        this.title = title;
-        this.content = content;
+public class Question extends Stage{
+    public Question(String title, String content){
+        super(title,content);
     }
-
     public String getTitle() {
         return title;
     }
