@@ -6,6 +6,7 @@ public class Showing extends Stage{
     private ArrayList<Vas> vass;
     private ArrayList<gLMS> glmss;
     private ArrayList<Question> quess;
+    private ArrayList<Notice> notices;
     private Data data;
 
     public Showing(String title, String content, Experiment experiment){
@@ -18,12 +19,15 @@ public class Showing extends Stage{
         vass = new ArrayList<>();
         glmss = new ArrayList<>();
         quess = new ArrayList<>();
+        notices = new ArrayList<>();
         Vas vas = new Vas(title,content);
         vass.add(vas);
         gLMS glms = new gLMS(title,content);
         glmss.add(glms);
         Question ques = new Question(title,content);
         quess.add(ques);
+        Notice notice = new Notice(title,content);
+        notices.add(notice);
     }
     public void addStage(int stage){
         Scanner sc = new Scanner(System.in);
@@ -33,8 +37,9 @@ public class Showing extends Stage{
         System.out.print("Enter the content: ");
         contentEn = sc.nextLine();
         switch (stage) {
-//            case 1:
-//                break;
+           case 1:
+                addNotice(titleEn, contentEn);
+               break;
 //            case 2:
 //                break;
 //            case 3:
@@ -53,6 +58,11 @@ public class Showing extends Stage{
         }
     }
 
+    public void addNotice(String title, String content){
+        Notice temp = new Notice(title,content);
+        notices.add(temp);
+        System.out.println("Add Notice is done");
+    }
     public void addVas(String title, String content) {
         Vas temp = new Vas(title,content);
         vass.add(temp);
@@ -74,9 +84,13 @@ public class Showing extends Stage{
         System.out.println("\n-----------------------The edit experiment-----------------------");
         System.out.println("Creator: Mia\n Experiment Name: Testing");
         System.out.println("-----------------------Stage 1: Notice Stage---------------------"); // Stag 1:
-        /*
-                QuynhAnh fill
-         */
+            count=0;
+            for(Notice notice: notices){
+                if(count>0)
+                    System.out.print("Title: " + notice.getTitle()+ "\nContent: "+ notice.getContent());
+                count++;
+            }
+                
         System.out.println("-----------------------Stage 2: Input Stage----------------------"); // Stag 2:
         /*
                 QuynhAnh fill
