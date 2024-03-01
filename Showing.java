@@ -8,6 +8,7 @@ public class Showing extends Stage{
     private ArrayList<Question> quess;
     private ArrayList<Notice> notices;
     private ArrayList<Input> inputs;
+    private ArrayList<Timer>timers;
     private Data data;
 
     public Showing(String title, String content, Experiment experiment){
@@ -17,10 +18,12 @@ public class Showing extends Stage{
     }
 
     private void loadData() {
+        timers = new ArrayList<>();
+        notices = new ArrayList<>();
+        inputs=new ArrayList<>();
         vass = new ArrayList<>();
         glmss = new ArrayList<>();
         quess = new ArrayList<>();
-        notices = new ArrayList<>();
         Vas vas = new Vas(title,content);
         vass.add(vas);
         gLMS glms = new gLMS(title,content);
@@ -30,6 +33,9 @@ public class Showing extends Stage{
         Notice notice = new Notice(title,content);
         notices.add(notice);
         Input input = new Input (title,content);
+        inputs.add(input);
+        Timer timer = new Timer(title, content);
+        timers.add(timer);
     }
     public void addStage(int stage){
         Scanner sc = new Scanner(System.in);
@@ -45,8 +51,9 @@ public class Showing extends Stage{
            case 2:
             addInput(titleEn, contentEn);
                break;
-//            case 3:
-//                break;
+           case 3:
+                addTimer(titleEn, contentEn);
+               break;
             case 4:
                 addVas(titleEn,contentEn);
                 break;
@@ -59,6 +66,11 @@ public class Showing extends Stage{
             default:
                 break;
         }
+    }
+    public void addTimer(String title, String content){
+        Timer temp = new Timer(title,content);
+        timers.add(temp);
+        System.out.println(" Add Timer stage is done");
     }
 
     public void addInput(String title, String content){
@@ -96,7 +108,7 @@ public class Showing extends Stage{
             count=0;
             for(Notice notice: notices){
                 if(count>0)
-                    System.out.print("Title: " + notice.getTitle()+ "\nContent: "+ notice.getContent());
+                    System.out.print("Title: " + notice.getTitle()+ "\nContent: "+ notice.getContent()+ "\n");
                 count++;
             }
                 
@@ -104,14 +116,17 @@ public class Showing extends Stage{
         count=0;
         for(Input input: inputs){
             if(count>0)
-                System.out.print("Title: " + input.getTitle()+ "\nContent: "+ input.getContent());
+                System.out.print("Title: " + input.getTitle()+ "\nContent: "+ input.getContent()+ "\n");
             count++;
         }
         
         System.out.println("-----------------------Stage 3: Timer Stage----------------------"); // Stag 3:
-        /*
-                QuynhAnh fill
-         */
+        count=0;
+        for(Timer timer: timers){
+            if(count>0)
+            System.out.print("Title: "+ timer.getTitle() + "\nContent: "+ timer.getContent()+ "\n");
+            count++;
+        }
         count = 0;
         System.out.println("-----------------------Stage 4: VAS Stage------------------------"); // Stag 4:
         for (Vas vas: vass){
