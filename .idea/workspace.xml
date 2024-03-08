@@ -33,6 +33,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "thinhchau",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -68,6 +69,7 @@
       <workItem from="1709795296295" duration="676000" />
       <workItem from="1709868659195" duration="5000" />
       <workItem from="1709868803619" duration="107000" />
+      <workItem from="1709868940509" duration="271000" />
     </task>
     <servers />
   </component>
