@@ -1,7 +1,15 @@
 import java.awt.*;
 
 public abstract class Stage {
-    public String title = "Hungry ?", content = "Level";
+//    String Button_Text = "Continue";
+//    Boolean balanceRequire = true;
+//    String backgroundColour = "blue";
+//    String textColour = "black";
+//    String Font = "example";
+//    int startDelay = 0;
+//    int endDelay = 0;
+//    String buttonColour = "white";
+    public String title, content;
     public Stage(String title, String content) {
         this.title = title;
         this.content = content;
