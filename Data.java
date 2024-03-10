@@ -69,10 +69,6 @@ public class Data{
                     break;
             }
         }
-//        if (New)
-//            newEx();
-//        if (Edit)
-//            editEx();
     }
     public void newEx(){
         NewExperiment newex = new NewExperiment();
