@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Data{
@@ -69,45 +70,15 @@ public class Data{
                     break;
             }
         }
-//        if (New)
-//            newEx();
-//        if (Edit)
-//            editEx();
     }
     public void newEx(){
         NewExperiment newex = new NewExperiment();
         news.add(newex);
+        try {
+            ExperimentManager.saveExperiments(news, "data/experiments.txt");  // Pass a list containing the experiment and the desired file path
+            System.out.println("Experiment saved successfully to: data/experiments.txt");
+        } catch (Exception e) {
+            System.out.println("Error saving experiment: " + e.getMessage());
+        }
     }
-//    public NewExperiment editEx(NewExperiment ex, int stage) {
-//        Scanner sc = new Scanner(System.in);
-//        String titleEn, contentEn;
-//        System.out.print("Enter the title: ");
-//        titleEn = sc.nextLine();
-//        System.out.print("Enter the content: ");
-//        contentEn = sc.nextLine();
-//        switch (stage) {
-//            case 1:
-//                ex.addNotice(titleEn, contentEn);
-//                break;
-//            case 2:
-//                ex.addInput(titleEn, contentEn);
-//                break;
-//            case 3:
-//                ex.addTimer(titleEn, contentEn);
-//                break;
-//            case 4:
-//                ex.addVas(titleEn, contentEn);
-//                break;
-//            case 5:
-//                ex.addgLMS(titleEn, contentEn);
-//                break;
-//            case 6:
-//                ex.addQues(titleEn, contentEn);
-//                break;
-//            default:
-//                break;
-//        }
-//    }
-
-
 }

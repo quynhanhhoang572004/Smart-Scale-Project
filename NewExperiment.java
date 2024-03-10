@@ -32,6 +32,7 @@ public class NewExperiment {
         vass = new ArrayList<>();
         glmss = new ArrayList<>();
         quess = new ArrayList<>();
+
     }
     public void addStage(int stage) {
         if (tree.isEmpty()) {
