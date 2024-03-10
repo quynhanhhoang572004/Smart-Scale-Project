@@ -9,7 +9,6 @@ public class Showing extends Stage{
     private ArrayList<Notice> notices;
     private ArrayList<Input> inputs;
     private ArrayList<Timer>timers;
-    private Data data;
 
     public Showing(String title, String content, Experiment experiment){
         super(title,content);
@@ -83,6 +82,7 @@ public class Showing extends Stage{
         Notice temp = new Notice(title,content);
         notices.add(temp);
         System.out.println("Add Notice is done");
+        System.out.println("Added to db");
     }
     public void addVas(String title, String content) {
         Vas temp = new Vas(title,content);
@@ -150,6 +150,22 @@ public class Showing extends Stage{
             count++;
         }
         System.out.println("-------------------------------------------------------------------");
+    }
+
+    @Override
+    public String toString() {
+        return "Showing{" +
+                "experiment=" + experiment +
+                ", vass=" + vass +
+                ", glmss=" + glmss +
+                ", quess=" + quess +
+                ", notices=" + notices +
+                ", inputs=" + inputs +
+                ", timers=" + timers +
+                ", data=" + data +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                '}';
     }
 }
 
