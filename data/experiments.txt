@@ -1,11 +1,4 @@
 ------ Experiment Data ------
-Creator: ChauTHinh
-Experiment Name: @d2ewe
-Description: nhieu thu 
-  Notes:
-    - test lan 2
-------------------------------
------- Experiment Data ------
 {[Thinh Chau],[Experiment 01],[test Data writer],
   Notes:note for experiment 01
 ***** Details *****

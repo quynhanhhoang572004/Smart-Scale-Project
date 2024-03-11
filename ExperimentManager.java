@@ -64,6 +64,8 @@ public class ExperimentManager {
                     writer.newLine();
                 }
             }
+            writer.write("------ End line ------");
+            writer.newLine();
         writer.close();
         }
     }
@@ -157,22 +159,92 @@ public class ExperimentManager {
     }
 
     private static void parseTimerContent(NewExperiment currentExperiment, String string) {
+        ArrayList<Timer> timers = new ArrayList<>();
+        for (String line : string.split("\n")) {
+            String[] parts = line.split(" \\| ");
+            if (parts.length == 2) {
+                String title = parts[0].trim();
+                String content = parts[1].trim();
+                Timer timer = new Timer(title, content);
+                timers.add(timer);
+            } else {
+                // Handle invalid timer format (log a warning or throw an exception)
+                System.err.println("Invalid timer format in line: " + line);
+            }
+        }
+        currentExperiment.setTimers(timers);
     }
 
     private static void parseVasContent(NewExperiment currentExperiment, String string) {
-
+        ArrayList<Vas> vass = new ArrayList<>();
+        for (String line : string.split("\n")) {
+            String[] parts = line.split(" \\| ");  // Split based on the pattern " | "
+            if (parts.length == 2) {
+                String title = parts[0].trim();
+                String content = parts[1].trim();
+                // Create an Input object using title and content
+                Vas vas = new Vas(title, content); // Adapt constructor arguments if needed
+                vass.add(vas);
+            } else {
+                // Handle invalid input format (log a warning or throw an exception)
+                System.err.println("Invalid input format in line: " + line);
+            }
+        }
+        currentExperiment.setVass(vass);
     }
 
     private static void parsegLMSContent(NewExperiment currentExperiment, String string) {
-
+        ArrayList<gLMS> gLMSs = new ArrayList<>();
+        for (String line : string.split("\n")) {
+            String[] parts = line.split(" \\| ");  // Split based on the pattern " | "
+            if (parts.length == 2) {
+                String title = parts[0].trim();
+                String content = parts[1].trim();
+                // Create an Input object using title and content
+                gLMS gLMS = new gLMS(title, content); // Adapt constructor arguments if needed
+                gLMSs.add(gLMS);
+            } else {
+                // Handle invalid input format (log a warning or throw an exception)
+                System.err.println("Invalid input format in line: " + line);
+            }
+        }
+        currentExperiment.setGlmss(gLMSs);
     }
 
     private static void parseQuestionContent(NewExperiment currentExperiment, String string) {
-
+        ArrayList<Question> questions = new ArrayList<>();
+        for (String line : string.split("\n")) {
+            String[] parts = line.split(" \\| ");  // Split based on the pattern " | "
+            if (parts.length == 2) {
+                String title = parts[0].trim();
+                String content = parts[1].trim();
+                // Create an Input object using title and content
+                Question question = new Question(title, content); // Adapt constructor arguments if needed
+                questions.add(question);
+            } else {
+                // Handle invalid input format (log a warning or throw an exception)
+                System.err.println("Invalid input format in line: " + line);
+            }
+        }
+        currentExperiment.setQuess(questions);
     }
 
     private static void parseInputContent(NewExperiment currentExperiment, String string) {
-
+        ArrayList<Input> inputs = new ArrayList<>();
+        for (String line : string.split("\n")) {
+            String[] parts = line.split(" \\| ");  // Split based on the pattern " | "
+            if (parts.length == 2) {
+                String title = parts[0].trim();
+                String content = parts[1].trim();
+                // Create an Input object using title and content
+                Input input = new Input(title, content); // Adapt constructor arguments if needed
+                inputs.add(input);
+            } else {
+                // Handle invalid input format (log a warning or throw an exception)
+                System.err.println("Invalid input format in line: " + line);
+            }
+        }
+        currentExperiment.setInputs(inputs);
     }
 }
 
