@@ -1,7 +1,7 @@
 ------ Experiment Data ------
-Creator: Thinh chauasudu
-Experiment Name: asdjas
-Description: askdhaihd82dq
+Creator: ChauTHinh
+Experiment Name: @d2ewe
+Description: nhieu thu 
   Notes:
-    - ca
+    - test lan 2
 ------------------------------

@@ -195,4 +195,29 @@ public class NewExperiment {
     public void setAddNote(String addNote) {
         this.addNote = addNote;
     }
+
+    public ArrayList<Vas> getVass() {
+        return vass;
+    }
+
+    public ArrayList<gLMS> getGlmss() {
+        return glmss;
+    }
+
+    public ArrayList<Question> getQuess() {
+        return quess;
+    }
+
+    public ArrayList<Notice> getNotices() {
+        return notices;
+    }
+
+    public ArrayList<Input> getInputs() {
+        return inputs;
+    }
+
+    public ArrayList<Timer> getTimers() {
+        return timers;
+    }
+
 }
