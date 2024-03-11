@@ -5,7 +5,7 @@ import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExperimentManager {
+abstract class ExperimentManager {
     public static void saveExperiments(List<NewExperiment> experiments, String filePath) throws Exception {
         BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true));
         for (NewExperiment experiment : experiments) {
@@ -78,8 +78,8 @@ public class ExperimentManager {
         }
     }
 
-    public static List<NewExperiment> loadExperiments(String filePath) throws Exception {
-        List<NewExperiment> experiments = new ArrayList<>();
+    public static ArrayList<NewExperiment> loadExperiments(String filePath) throws Exception {
+        ArrayList<NewExperiment> experiments = new ArrayList<>();
         BufferedReader reader = new BufferedReader(new FileReader(filePath));
 
         String line;

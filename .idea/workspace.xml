@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="680276c9-fc57-4580-8c0c-be0dc554bbf0" name="Changes" comment="first ver of load function">
+    <list default="true" id="680276c9-fc57-4580-8c0c-be0dc554bbf0" name="Changes" comment="fix bug save data">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/Data.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExperimentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewExperiment.java" beforeDir="false" afterPath="$PROJECT_DIR$/NewExperiment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Timer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/TreeNode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/experiments.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/experiments.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Data.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/ExperimentManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/NewExperiment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/data/TreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Data.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/ExperimentManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/ExperimentManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/data/experiments.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/data/experiments.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +105,8 @@
       <workItem from="1710042254474" duration="6918000" />
       <workItem from="1710119823335" duration="2553000" />
       <workItem from="1710123621899" duration="8273000" />
-      <workItem from="1710150551940" duration="322000" />
+      <workItem from="1710150551940" duration="1229000" />
+      <workItem from="1710170894343" duration="316000" />
     </task>
     <task id="LOCAL-00001" summary="test DataAccess">
       <option name="closed" value="true" />
@@ -177,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710133799211</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fix bug save data">
+      <option name="closed" value="true" />
+      <created>1710151028609</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1710151028609</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +203,7 @@
     <MESSAGE value="Load Experiments first touch" />
     <MESSAGE value="Now it can save all stages" />
     <MESSAGE value="first ver of load function" />
-    <option name="LAST_COMMIT_MESSAGE" value="first ver of load function" />
+    <MESSAGE value="fix bug save data" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bug save data" />
   </component>
 </project>

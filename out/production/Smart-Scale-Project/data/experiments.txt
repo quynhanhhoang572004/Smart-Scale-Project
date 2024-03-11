@@ -18,3 +18,10 @@
 	 *** Vas ***
 a2dasda | 2d2d1ad
 ------ End line ------
+------ Experiment Data ------
+{[ahsdi],[d2d1d],[d1qsd]}
+	 Notes: alskdalskdasdkakdkaksdkaskdka
+***** Details *****
+	 *** Vas ***
+d12d | asd1d1da
+------ End line ------

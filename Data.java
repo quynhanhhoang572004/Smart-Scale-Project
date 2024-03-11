@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-public class Data{
+public class Data extends ExperimentManager{
 
     private ArrayList<NewExperiment> news;
     public Data(){
@@ -58,6 +58,11 @@ public class Data{
                     }
                     break;
                 case "r":
+                    try {
+                        this.news = ExperimentManager.loadExperiments("data/experiments.txt");
+                    } catch (Exception e) {
+                        throw new RuntimeException(e);
+                    }
                     for (NewExperiment newex: news) {
                         newex.show();
                     }
