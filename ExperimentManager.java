@@ -1,81 +1,13 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-abstract class ExperimentManager {
-    public static void saveExperiments(List<NewExperiment> experiments, String filePath) throws Exception {
-        BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true));
-        for (NewExperiment experiment : experiments) {
-            // Write a header line (optional)
-            writer.write("------ Experiment Data ------");
-            writer.newLine();
-            writer.write("{[" + experiment.getCreatorName() + "],");
-            writer.write("[" + experiment.getExName() + "],");
-            writer.write("[" + experiment.getExDescription() + "]}");
-            writer.newLine();
-            // Write notes with indentation
-            String addNote = experiment.getAddNote();
-            if (!addNote.isEmpty()) {
-                writer.write("\t Notes: " + addNote);
-                writer.newLine();
-            }
-            writer.write("***** Details *****");
-            writer.newLine();
-            if (!experiment.getVass().isEmpty()) {
-                writer.write("\t *** Vas ***");
-                writer.newLine();
-                for (Vas v : experiment.getVass()) {
-                    writer.write(v.getTitle() + " | " + v.getContent());
-                    writer.newLine();
-                }
-            }
-            if (!experiment.getGlmss().isEmpty()) {
-                writer.write("\t *** gLMS ***");
-                writer.newLine();
-                for (gLMS g : experiment.getGlmss()) {
-                    writer.write(g.getTitle() + " | " + g.getContent());
-                    writer.newLine();
-                }
-            }
-            if (!experiment.getQuess().isEmpty()) {
-                writer.write("\t *** Question ***");
-                writer.newLine();
-                for (Question q : experiment.getQuess()) {
-                    writer.write(q.getTitle() + " | " + q.getContent());
-                    writer.newLine();
-                }
-            }
-            if (!experiment.getInputs().isEmpty()) {
-                writer.write("\t *** Input ***");
-                writer.newLine();
-                for (Input i : experiment.getInputs()) {
-                    writer.write(i.getTitle() + " | " + i.getContent());
-                    writer.newLine();
-                }
-            }
-            if (!experiment.getNotices().isEmpty()) {
-                writer.write("\t *** Notice ***");
-                writer.newLine();
-                for (Notice n : experiment.getNotices()) {
-                    writer.write(n.getTitle() + " | " + n.getContent());
-                    writer.newLine();
-                }
-            }
-            if (!experiment.getTimers().isEmpty()) {
-                writer.write("\t *** Timer ***");
-                writer.newLine();
-                for (Timer t : experiment.getTimers()) {
-                    writer.write(t.getTitle() + " | " + t.getContent());
-                    writer.newLine();
-                }
-            }
-            writer.write("------ End line ------");
-            writer.newLine();
-            writer.close();
-        }
+public class ExperimentManager {
+    public static void saveData(String value) throws IOException {
+        BufferedWriter writer = new BufferedWriter(new FileWriter("data/experiments.txt", true));
+        writer.write(value);
+        writer.newLine();
+        writer.close();
     }
 
     public static ArrayList<NewExperiment> loadExperiments(String filePath) throws Exception {
@@ -130,9 +62,7 @@ abstract class ExperimentManager {
                             }
                         }
                     }
-                }
-
-                experiments.add(experiment);
+                }experiments.add(experiment);
             }
         }
 

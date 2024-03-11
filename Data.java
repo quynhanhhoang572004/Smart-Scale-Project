@@ -1,10 +1,11 @@
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 public class Data extends ExperimentManager{
 
     private ArrayList<NewExperiment> news;
-    public Data(){
+    public Data() throws Exception {
         Scanner sc = new Scanner(System.in);
         news = new ArrayList<>();
         boolean End = false;
@@ -58,11 +59,6 @@ public class Data extends ExperimentManager{
                     }
                     break;
                 case "r":
-                    try {
-                        this.news = ExperimentManager.loadExperiments("data/experiments.txt");
-                    } catch (Exception e) {
-                        throw new RuntimeException(e);
-                    }
                     for (NewExperiment newex: news) {
                         newex.show();
                     }
@@ -75,16 +71,11 @@ public class Data extends ExperimentManager{
                     break;
             }
         }
-        try {
-            ExperimentManager.saveExperiments(news, "data/experiments.txt");  // Pass a list containing the experiment and the desired file path
-            System.out.println("Experiment saved successfully to: data/experiments.txt");
-        } catch (Exception e) {
-            System.out.println("Error saving experiment: " + e.getMessage());
-        }
     }
-    public void newEx(){
+    public void newEx() throws IOException {
         NewExperiment newex = new NewExperiment();
         news.add(newex);
+        saveData(newex.toString());
 
     }
 }
