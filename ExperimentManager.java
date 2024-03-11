@@ -12,239 +12,132 @@ public class ExperimentManager {
             // Write a header line (optional)
             writer.write("------ Experiment Data ------");
             writer.newLine();
-            writer.write("{["+experiment.getCreatorName()+"],");
-            writer.write("["+experiment.getExName()+"],");
-            writer.write("["+experiment.getExDescription()+"],");
+            writer.write("{[" + experiment.getCreatorName() + "],");
+            writer.write("[" + experiment.getExName() + "],");
+            writer.write("[" + experiment.getExDescription() + "]}");
             writer.newLine();
             // Write notes with indentation
             String addNote = experiment.getAddNote();
             if (!addNote.isEmpty()) {
-                writer.write("  Notes:" + addNote);
+                writer.write("\t Notes: " + addNote);
                 writer.newLine();
             }
             writer.write("***** Details *****");
             writer.newLine();
-            if(!experiment.getVass().isEmpty()){
+            if (!experiment.getVass().isEmpty()) {
                 writer.write("\t *** Vas ***");
                 writer.newLine();
-                for(Vas v : experiment.getVass()){
+                for (Vas v : experiment.getVass()) {
                     writer.write(v.getTitle() + " | " + v.getContent());
                     writer.newLine();
                 }
             }
-            if(!experiment.getGlmss().isEmpty()){
+            if (!experiment.getGlmss().isEmpty()) {
                 writer.write("\t *** gLMS ***");
                 writer.newLine();
-                for(gLMS g : experiment.getGlmss()){
+                for (gLMS g : experiment.getGlmss()) {
                     writer.write(g.getTitle() + " | " + g.getContent());
                     writer.newLine();
                 }
             }
-            if(!experiment.getQuess().isEmpty()){
+            if (!experiment.getQuess().isEmpty()) {
                 writer.write("\t *** Question ***");
                 writer.newLine();
-                for(Question q : experiment.getQuess()){
+                for (Question q : experiment.getQuess()) {
                     writer.write(q.getTitle() + " | " + q.getContent());
                     writer.newLine();
                 }
             }
-            if(!experiment.getInputs().isEmpty()){
+            if (!experiment.getInputs().isEmpty()) {
                 writer.write("\t *** Input ***");
                 writer.newLine();
-                for(Input i : experiment.getInputs()){
+                for (Input i : experiment.getInputs()) {
                     writer.write(i.getTitle() + " | " + i.getContent());
                     writer.newLine();
                 }
             }
-            if(!experiment.getTimers().isEmpty()){
+            if (!experiment.getNotices().isEmpty()) {
+                writer.write("\t *** Notice ***");
+                writer.newLine();
+                for (Notice n : experiment.getNotices()) {
+                    writer.write(n.getTitle() + " | " + n.getContent());
+                    writer.newLine();
+                }
+            }
+            if (!experiment.getTimers().isEmpty()) {
                 writer.write("\t *** Timer ***");
                 writer.newLine();
-                for(Timer t : experiment.getTimers()){
+                for (Timer t : experiment.getTimers()) {
                     writer.write(t.getTitle() + " | " + t.getContent());
                     writer.newLine();
                 }
             }
             writer.write("------ End line ------");
             writer.newLine();
-        writer.close();
+            writer.close();
         }
     }
 
     public static List<NewExperiment> loadExperiments(String filePath) throws Exception {
-        BufferedReader reader = new BufferedReader(new FileReader(filePath));
         List<NewExperiment> experiments = new ArrayList<>();
-        NewExperiment currentExperiment = null;
-        StringBuilder vasContent = new StringBuilder();
-        StringBuilder gLMSContent = new StringBuilder();
-        StringBuilder questionContent = new StringBuilder();
-        StringBuilder inputContent = new StringBuilder();
-        StringBuilder timerContent = new StringBuilder();
+        BufferedReader reader = new BufferedReader(new FileReader(filePath));
 
         String line;
         while ((line = reader.readLine()) != null) {
-            // Identify experiment sections based on keywords
-            if (line.startsWith("------ Experiment Data ------")) {
-                currentExperiment = new NewExperiment();
-                vasContent = new StringBuilder();  // Reset detail section builders
-                gLMSContent = new StringBuilder();
-                questionContent = new StringBuilder();
-                inputContent = new StringBuilder();
-                timerContent = new StringBuilder();
-            } else if (line.startsWith("Creator:")) {
-                if (currentExperiment != null) {
-                    currentExperiment.setCreatorName(line.substring(line.indexOf(":") + 1).trim());
-                }
-            } else if (line.startsWith("Experiment Name:")) {
-                if (currentExperiment != null) {
-                    currentExperiment.setExName(line.substring(line.indexOf(":") + 1).trim());
-                }
-            } else if (line.startsWith("Description:")) {
-                if (currentExperiment != null) {
-                    currentExperiment.setExDescription(line.substring(line.indexOf(":") + 1).trim());
-                }
-            } else if (line.startsWith("  Notes:")) {
-                if (currentExperiment != null) {
-                    StringBuilder notes = new StringBuilder();
-                    while ((line = reader.readLine()) != null && !line.trim().isEmpty()) {
-                        notes.append(line.substring(2).trim()).append("\n");
-                    }
-                    currentExperiment.setAddNote(notes.toString().trim());
-                }
-            } else if (line.startsWith("*** Vas ***")) {
-                vasContent = new StringBuilder();  // Reset builder for new Vas section
-            } else if (line.startsWith("*** gLMS ***")) {
-                gLMSContent = new StringBuilder();  // Reset builder for new gLMS section
-            } else if (line.startsWith("*** Question ***")) {
-                questionContent = new StringBuilder();  // Reset builder for new Question section
-            } else if (line.startsWith("*** Input ***")) {
-                inputContent = new StringBuilder();  // Reset builder for new Input section
-            } else if (line.startsWith("*** Timer ***")) {
-                timerContent = new StringBuilder();  // Reset builder for new Timer section
-            } else if (line.startsWith("***** Details *****")) {
-                continue;
-            } else if (!line.trim().isEmpty() && !line.startsWith("---")) {  // Valid detail content line
-                if (!vasContent.isEmpty()) {
-                    vasContent.append("\n").append(line);
-                } else if (!gLMSContent.isEmpty()) {
-                    gLMSContent.append("\n").append(line);
-                } else if (!questionContent.isEmpty()) {
-                    questionContent.append("\n").append(line);
-                } else if (!inputContent.isEmpty()) {
-                    inputContent.append("\n").append(line);
-                } else if (!timerContent.isEmpty()) {
-                    timerContent.append("\n").append(line);
-                }
-            } else if (line.startsWith("------------------------------")) {
-                if (currentExperiment != null) {
-                    if (!vasContent.isEmpty()) {
-                        parseVasContent(currentExperiment, vasContent.toString());  // Parse Vas content after section ends
-                    }
-                    if (!gLMSContent.isEmpty()) {
-                        parsegLMSContent(currentExperiment, gLMSContent.toString());  // Parse gLMS content
-                    }
-                    if (!questionContent.isEmpty()) {
-                        parseQuestionContent(currentExperiment, questionContent.toString());  // Parse Question content
-                    }
-                    if (!inputContent.isEmpty()) {
-                        parseInputContent(currentExperiment, inputContent.toString());  // Parse Input content
-                    }
-                    if (!timerContent.isEmpty()){
-                        parseTimerContent(currentExperiment, timerContent.toString());  // Parse Timer content
-                    }
+            if (line.equals("------ Experiment Data ------")) {
+                NewExperiment experiment = new NewExperiment();
 
+                // Creator Name
+                line = reader.readLine();  // Read the next line
+                experiment.setCreatorName(line.substring(1, line.length() - 1));  // Extract name (remove brackets)
+
+                // Experiment Name
+                line = reader.readLine();
+                experiment.setExName(line.substring(1, line.length() - 1));
+
+                // Experiment Description
+                line = reader.readLine();
+                experiment.setExDescription(line.substring(1, line.length() - 1));
+
+                // Notes (optional)
+                line = reader.readLine();
+                if (line.startsWith("\t Notes: ")) {
+                    experiment.setAddNote(line.substring(9));  // Extract note content (remove prefix)
                 }
+
+                // Details (Vas, gLMS, Question, Input, Timer)
+                while ((line = reader.readLine()) != null && !line.equals("------ End line ------")) {
+                    if (line.startsWith("\t *** ")) {
+                        String section = line.substring(3, line.indexOf(" ***"));  // Extract section name (e.g., Vas)
+                        while ((line = reader.readLine()) != null && !line.isEmpty()) {  // Read details until empty line
+                            String[] content = line.split(" \\| ");  // Split details by pipe delimiter
+                            switch (section) {
+                                case "Vas":
+                                    experiment.addVas(content[0], content[1]);
+                                    break;
+                                case "gLMS":
+                                    experiment.addgLMS(content[0], content[1]);
+                                    break;
+                                case "Question":
+                                    experiment.addQues(content[0], content[1]);
+                                    break;
+                                case "Input":
+                                    experiment.addInput(content[0], content[1]);
+                                    break;
+                                case "Timer":
+                                    experiment.addTimer(content[0],content[1]);
+                                    break;
+                            }
+                        }
+                    }
+                }
+
+                experiments.add(experiment);
             }
         }
+
+        reader.close();
         return experiments;
-    }
-
-    private static void parseTimerContent(NewExperiment currentExperiment, String string) {
-        ArrayList<Timer> timers = new ArrayList<>();
-        for (String line : string.split("\n")) {
-            String[] parts = line.split(" \\| ");
-            if (parts.length == 2) {
-                String title = parts[0].trim();
-                String content = parts[1].trim();
-                Timer timer = new Timer(title, content);
-                timers.add(timer);
-            } else {
-                // Handle invalid timer format (log a warning or throw an exception)
-                System.err.println("Invalid timer format in line: " + line);
-            }
-        }
-        currentExperiment.setTimers(timers);
-    }
-
-    private static void parseVasContent(NewExperiment currentExperiment, String string) {
-        ArrayList<Vas> vass = new ArrayList<>();
-        for (String line : string.split("\n")) {
-            String[] parts = line.split(" \\| ");  // Split based on the pattern " | "
-            if (parts.length == 2) {
-                String title = parts[0].trim();
-                String content = parts[1].trim();
-                // Create an Input object using title and content
-                Vas vas = new Vas(title, content); // Adapt constructor arguments if needed
-                vass.add(vas);
-            } else {
-                // Handle invalid input format (log a warning or throw an exception)
-                System.err.println("Invalid input format in line: " + line);
-            }
-        }
-        currentExperiment.setVass(vass);
-    }
-
-    private static void parsegLMSContent(NewExperiment currentExperiment, String string) {
-        ArrayList<gLMS> gLMSs = new ArrayList<>();
-        for (String line : string.split("\n")) {
-            String[] parts = line.split(" \\| ");  // Split based on the pattern " | "
-            if (parts.length == 2) {
-                String title = parts[0].trim();
-                String content = parts[1].trim();
-                // Create an Input object using title and content
-                gLMS gLMS = new gLMS(title, content); // Adapt constructor arguments if needed
-                gLMSs.add(gLMS);
-            } else {
-                // Handle invalid input format (log a warning or throw an exception)
-                System.err.println("Invalid input format in line: " + line);
-            }
-        }
-        currentExperiment.setGlmss(gLMSs);
-    }
-
-    private static void parseQuestionContent(NewExperiment currentExperiment, String string) {
-        ArrayList<Question> questions = new ArrayList<>();
-        for (String line : string.split("\n")) {
-            String[] parts = line.split(" \\| ");  // Split based on the pattern " | "
-            if (parts.length == 2) {
-                String title = parts[0].trim();
-                String content = parts[1].trim();
-                // Create an Input object using title and content
-                Question question = new Question(title, content); // Adapt constructor arguments if needed
-                questions.add(question);
-            } else {
-                // Handle invalid input format (log a warning or throw an exception)
-                System.err.println("Invalid input format in line: " + line);
-            }
-        }
-        currentExperiment.setQuess(questions);
-    }
-
-    private static void parseInputContent(NewExperiment currentExperiment, String string) {
-        ArrayList<Input> inputs = new ArrayList<>();
-        for (String line : string.split("\n")) {
-            String[] parts = line.split(" \\| ");  // Split based on the pattern " | "
-            if (parts.length == 2) {
-                String title = parts[0].trim();
-                String content = parts[1].trim();
-                // Create an Input object using title and content
-                Input input = new Input(title, content); // Adapt constructor arguments if needed
-                inputs.add(input);
-            } else {
-                // Handle invalid input format (log a warning or throw an exception)
-                System.err.println("Invalid input format in line: " + line);
-            }
-        }
-        currentExperiment.setInputs(inputs);
     }
 }
 

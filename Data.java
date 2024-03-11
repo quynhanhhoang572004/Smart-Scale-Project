@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
 public class Data{
 
     private ArrayList<NewExperiment> news;
@@ -9,6 +8,7 @@ public class Data{
         Scanner sc = new Scanner(System.in);
         news = new ArrayList<>();
         boolean End = false;
+
         System.out.println("-----------------------Open------------------------");
         while(!End){
             System.out.println("Choose your choice: New Experiment(n), Edit Experiment(e), Results (r), Stop(s):");

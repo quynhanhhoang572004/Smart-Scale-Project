@@ -1,10 +1,27 @@
+
 ------ Experiment Data ------
-{[Thinh Chau],[Experiment 01],[test Data writer],
-  Notes:note for experiment 01
+{[Thinh ],[test 12;21 11/3/24],[aosdkaosd],
+  Notes:9u12jd9j1d
 ***** Details *****
-    *** Vas ***
-stage 4 | note 4
-    *** Input ***
-stage 2 | note 2
-    *** Timer ***
-stage 3 | note 3
+------ End line ------
+------ Experiment Data ------
+{[Thinh],[test 12;23 11/3/24],[adiij2idi2idj2d2jod],
+	 Notes: aksocka90kw0kcaspcasd
+***** Details *****
+	 *** Question ***
+2wd | 2dasdasfawf
+------ End line ------
+------ Experiment Data ------
+{[Tyr1on],[4;31 11/3/24 test],[aoskdoqd1],
+	 Notes: 123ed1d12d
+***** Details *****
+	 *** Vas ***
+a2dasda | 2d2d1ad
+------ End line ------
+------ Experiment Data ------
+{[ahsdi],[d2d1d],[d1qsd]}
+	 Notes: alskdalskdasdkakdkaksdkaskdka
+***** Details *****
+	 *** Vas ***
+d12d | asd1d1da
+------ End line ------

@@ -220,27 +220,4 @@ public class NewExperiment {
         return timers;
     }
 
-    public void setVass(ArrayList<Vas> vass) {
-        this.vass = vass;
-    }
-
-    public void setGlmss(ArrayList<gLMS> glmss) {
-        this.glmss = glmss;
-    }
-
-    public void setQuess(ArrayList<Question> quess) {
-        this.quess = quess;
-    }
-
-    public void setNotices(ArrayList<Notice> notices) {
-        this.notices = notices;
-    }
-
-    public void setInputs(ArrayList<Input> inputs) {
-        this.inputs = inputs;
-    }
-
-    public void setTimers(ArrayList<Timer> timers) {
-        this.timers = timers;
-    }
 }

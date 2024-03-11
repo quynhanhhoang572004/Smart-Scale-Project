@@ -1,7 +1,20 @@
+
 ------ Experiment Data ------
-Creator: ChauTHinh
-Experiment Name: @d2ewe
-Description: nhieu thu 
-  Notes:
-    - test lan 2
-------------------------------
+{[Thinh ],[test 12;21 11/3/24],[aosdkaosd],
+  Notes:9u12jd9j1d
+***** Details *****
+------ End line ------
+------ Experiment Data ------
+{[Thinh],[test 12;23 11/3/24],[adiij2idi2idj2d2jod],
+	 Notes: aksocka90kw0kcaspcasd
+***** Details *****
+	 *** Question ***
+2wd | 2dasdasfawf
+------ End line ------
+------ Experiment Data ------
+{[Tyr1on],[4;31 11/3/24 test],[aoskdoqd1],
+	 Notes: 123ed1d12d
+***** Details *****
+	 *** Vas ***
+a2dasda | 2d2d1ad
+------ End line ------
