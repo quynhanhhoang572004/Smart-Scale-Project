@@ -70,15 +70,16 @@ public class Data{
                     break;
             }
         }
-    }
-    public void newEx(){
-        NewExperiment newex = new NewExperiment();
-        news.add(newex);
         try {
             ExperimentManager.saveExperiments(news, "data/experiments.txt");  // Pass a list containing the experiment and the desired file path
             System.out.println("Experiment saved successfully to: data/experiments.txt");
         } catch (Exception e) {
             System.out.println("Error saving experiment: " + e.getMessage());
         }
+    }
+    public void newEx(){
+        NewExperiment newex = new NewExperiment();
+        news.add(newex);
+
     }
 }

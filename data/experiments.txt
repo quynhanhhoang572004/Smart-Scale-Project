@@ -5,3 +5,13 @@ Description: nhieu thu
   Notes:
     - test lan 2
 ------------------------------
+------ Experiment Data ------
+{[Thinh Chau],[Experiment 01],[test Data writer],
+  Notes:note for experiment 01
+***** Details *****
+    *** Vas ***
+stage 4 | note 4
+    *** Input ***
+stage 2 | note 2
+    *** Timer ***
+stage 3 | note 3
