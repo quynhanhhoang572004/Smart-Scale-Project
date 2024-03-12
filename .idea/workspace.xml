@@ -4,32 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="680276c9-fc57-4580-8c0c-be0dc554bbf0" name="Changes" comment="modify loading function">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExperimentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewExperiment.java" beforeDir="false" afterPath="$PROJECT_DIR$/NewExperiment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notice.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Timer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Vas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/experiments.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/experiments.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gLMS.java" beforeDir="false" afterPath="$PROJECT_DIR$/gLMS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Data.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/ExperimentManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/ExperimentManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Input.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Input.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/NewExperiment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/NewExperiment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Notice.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Notice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Question.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Question.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Timer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Timer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Vas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Vas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/data/experiments.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/data/experiments.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/experiments.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/main.class" afterDir="false" />
-    </list>
+    <list default="true" id="680276c9-fc57-4580-8c0c-be0dc554bbf0" name="Changes" comment="saving data - new format" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -125,7 +100,7 @@
       <workItem from="1710119823335" duration="2553000" />
       <workItem from="1710123621899" duration="8273000" />
       <workItem from="1710150551940" duration="1229000" />
-      <workItem from="1710170894343" duration="4321000" />
+      <workItem from="1710170894343" duration="4471000" />
     </task>
     <task id="LOCAL-00001" summary="test DataAccess">
       <option name="closed" value="true" />
@@ -207,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710171582342</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="saving data - new format">
+      <option name="closed" value="true" />
+      <created>1710177334735</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1710177334735</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,6 +215,7 @@
     <MESSAGE value="first ver of load function" />
     <MESSAGE value="fix bug save data" />
     <MESSAGE value="modify loading function" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify loading function" />
+    <MESSAGE value="saving data - new format" />
+    <option name="LAST_COMMIT_MESSAGE" value="saving data - new format" />
   </component>
 </project>
