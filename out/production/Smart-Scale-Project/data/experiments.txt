@@ -1,0 +1,10 @@
+
+NewExperiment{creatorName='thinhchau', exName='testDA', exDescription='testDA', addNote='not'}
+Notice{title='stage 1', content='idk'}
+Notice{title='stage 1.2', content='idc'}
+Input{title='stage 2', content='no content'}
+Timer{title='stage 3', content='asdasda'}
+Vas{title='stage 4 ', content='sth'}
+gLMS{title='stage 5', content='asdi28d'}
+Question{title='stage 6', content='aodj39'}
+Question{title='stage 6.2', content='32d2d'}

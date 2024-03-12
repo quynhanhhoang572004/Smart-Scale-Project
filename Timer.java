@@ -10,10 +10,17 @@ public class Timer extends Stage {
         this.content=content;
     }
     public String getTitle(){
-        return title;
+        return this.title;
     } 
     public String getContent(){
-        return content;
+        return this.content;
     }
 
+    @Override
+    public String toString() {
+        return "Timer{" +
+                "title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                '}';
+    }
 }

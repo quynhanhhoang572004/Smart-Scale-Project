@@ -1,7 +1,8 @@
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class NewExperiment {
+public class NewExperiment extends ExperimentManager{
     private Data data;
     private String creatorName;
     private String exName;
@@ -16,6 +17,7 @@ public class NewExperiment {
     private ArrayList<Integer> tree;
     public static int count = 0;
     public NewExperiment(){
+        super();
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the Creator: ");
         setCreatorName(sc.nextLine());
@@ -32,8 +34,18 @@ public class NewExperiment {
         vass = new ArrayList<>();
         glmss = new ArrayList<>();
         quess = new ArrayList<>();
-
     }
+
+    @Override
+    public String toString() {
+        return "NewExperiment{" +
+                "creatorName='" + creatorName + '\'' +
+                ", exName='" + exName + '\'' +
+                ", exDescription='" + exDescription + '\'' +
+                ", addNote='" + addNote + '\'' +
+                '}';
+    }
+
     public void addStage(int stage) {
         if (tree.isEmpty()) {
             tree.add(stage);
@@ -54,34 +66,40 @@ public class NewExperiment {
             }
         }
     }
-    public void addNotice(String title, String content){
+    public void addNotice(String title, String content) throws IOException {
         Notice temp = new Notice(title,content);
+        saveData(temp.toString());
         notices.add(temp);
         System.out.println("Add Notice is done");
     }
-    public void addInput(String title, String content){
+    public void addInput(String title, String content) throws IOException {
         Input temp = new Input(title, content);
+        saveData(temp.toString());
         inputs.add(temp);
         System.out.println(" Add Input is done");
     }
-    public void addTimer(String title, String content){
+    public void addTimer(String title, String content) throws IOException {
         Timer temp = new Timer(title,content);
+        saveData(temp.toString());
         timers.add(temp);
         System.out.println(" Add Timer stage is done");
 
     }
-    public void addVas(String title, String content) {
+    public void addVas(String title, String content) throws IOException {
         Vas temp = new Vas(title,content);
+        saveData(temp.toString());
         vass.add(temp);
         System.out.println("Add Vas is done");
     }
-    public void addgLMS(String title, String content) {
+    public void addgLMS(String title, String content) throws IOException {
         gLMS temp = new gLMS(title,content);
+        saveData(temp.toString());
         glmss.add(temp);
         System.out.println("Add gLMS is done");
     }
-    public void addQues(String title, String content) {
+    public void addQues(String title, String content) throws IOException {
         Question temp = new Question(title,content);
+        saveData(temp.toString());
         quess.add(temp);
         System.out.println("Add Question is done");
     }
@@ -172,14 +190,6 @@ public class NewExperiment {
         return exName;
     }
 
-    public String getExDescription() {
-        return exDescription;
-    }
-
-    public String getAddNote() {
-        return addNote;
-    }
-
     public void setCreatorName(String creatorName) {
         this.creatorName = creatorName;
     }
@@ -195,4 +205,7 @@ public class NewExperiment {
     public void setAddNote(String addNote) {
         this.addNote = addNote;
     }
+
+
+
 }

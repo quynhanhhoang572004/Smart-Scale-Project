@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="680276c9-fc57-4580-8c0c-be0dc554bbf0" name="Changes" comment="test DataAccess">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExperimentManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/TreeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/experiments.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewExperiment.java" beforeDir="false" afterPath="$PROJECT_DIR$/NewExperiment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Data.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/DataAccess.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Edit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Experiment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Showing.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Stage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Stage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/data/data.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/main.class" afterDir="false" />
-    </list>
+    <list default="true" id="680276c9-fc57-4580-8c0c-be0dc554bbf0" name="Changes" comment="saving data - new format" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +14,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -55,24 +38,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.DataAccess.executor": "Run",
-    "Application.main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "thinhchau",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/USER/OneDrive - VietNam National University - HCM INTERNATIONAL UNIVERSITY/Desktop/Repositories/Smart-Scale-Project/data",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.DataAccess.executor&quot;: &quot;Run&quot;,
+    &quot;Application.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;thinhchau&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/USER/OneDrive - VietNam National University - HCM INTERNATIONAL UNIVERSITY/Desktop/Repositories/Smart-Scale-Project/data&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\USER\OneDrive - VietNam National University - HCM INTERNATIONAL UNIVERSITY\Desktop\Repositories\Smart-Scale-Project\data" />
@@ -113,7 +96,12 @@
       <workItem from="1709868803619" duration="107000" />
       <workItem from="1709868940509" duration="271000" />
       <workItem from="1709960569973" duration="863000" />
-      <workItem from="1710042254474" duration="6601000" />
+      <workItem from="1710042254474" duration="6918000" />
+      <workItem from="1710119823335" duration="2553000" />
+      <workItem from="1710123621899" duration="8273000" />
+      <workItem from="1710150551940" duration="1229000" />
+      <workItem from="1710170894343" duration="4471000" />
+      <workItem from="1710255887310" duration="729000" />
     </task>
     <task id="LOCAL-00001" summary="test DataAccess">
       <option name="closed" value="true" />
@@ -131,14 +119,112 @@
       <option name="project" value="LOCAL" />
       <updated>1710043911321</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="DA first">
+      <option name="closed" value="true" />
+      <created>1710051369278</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710051369278</updated>
+    </task>
+    <task id="LOCAL-00004" summary="DA first">
+      <option name="closed" value="true" />
+      <created>1710051387585</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710051387585</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Load Experiments first touch">
+      <option name="closed" value="true" />
+      <created>1710125519971</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710125519971</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Load Experiments first touch">
+      <option name="closed" value="true" />
+      <created>1710125545978</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710125545978</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Now it can save all stages">
+      <option name="closed" value="true" />
+      <created>1710127155092</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710127155092</updated>
+    </task>
+    <task id="LOCAL-00008" summary="first ver of load function">
+      <option name="closed" value="true" />
+      <created>1710133799211</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1710133799211</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fix bug save data">
+      <option name="closed" value="true" />
+      <created>1710151028609</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1710151028609</updated>
+    </task>
+    <task id="LOCAL-00010" summary="modify loading function">
+      <option name="closed" value="true" />
+      <created>1710171582342</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1710171582342</updated>
+    </task>
+    <task id="LOCAL-00011" summary="saving data - new format">
+      <option name="closed" value="true" />
+      <created>1710177334735</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1710177334735</updated>
+    </task>
+    <task id="LOCAL-00012" summary="saving data - new format">
+      <option name="closed" value="true" />
+      <created>1710255916076</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1710255916076</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test DataAccess" />
-    <option name="LAST_COMMIT_MESSAGE" value="test DataAccess" />
+    <MESSAGE value="DA first" />
+    <MESSAGE value="Load Experiments first touch" />
+    <MESSAGE value="Now it can save all stages" />
+    <MESSAGE value="first ver of load function" />
+    <MESSAGE value="fix bug save data" />
+    <MESSAGE value="modify loading function" />
+    <MESSAGE value="saving data - new format" />
+    <option name="LAST_COMMIT_MESSAGE" value="saving data - new format" />
   </component>
 </project>
