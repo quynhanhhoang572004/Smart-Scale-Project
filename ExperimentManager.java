@@ -4,7 +4,7 @@ import java.util.List;
 
 public class ExperimentManager {
     public static void saveData(String value) throws IOException {
-        BufferedWriter writer = new BufferedWriter(new FileWriter("data/experiments.txt", true));
+        BufferedWriter writer = new BufferedWriter(new FileWriter("data/experiments.txt", false));
         writer.write(value);
         writer.newLine();
         writer.close();

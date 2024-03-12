@@ -101,6 +101,7 @@
       <workItem from="1710123621899" duration="8273000" />
       <workItem from="1710150551940" duration="1229000" />
       <workItem from="1710170894343" duration="4471000" />
+      <workItem from="1710255887310" duration="729000" />
     </task>
     <task id="LOCAL-00001" summary="test DataAccess">
       <option name="closed" value="true" />
@@ -190,7 +191,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710177334735</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="saving data - new format">
+      <option name="closed" value="true" />
+      <created>1710255916076</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1710255916076</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
