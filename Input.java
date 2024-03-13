@@ -21,10 +21,9 @@ public class Input extends Stage {
 
     @Override
     public String toString() {
-        return "Input{" +
-                "title='" + title + '\'' +
-                ", content='" + content + '\'' +
-                '}';
+        return "Input{\t" + title +
+                "\t" + content
+                +"\t}";
     }
 }
 

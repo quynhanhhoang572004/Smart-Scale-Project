@@ -21,10 +21,9 @@ public class Notice extends Stage{
 
     @Override
     public String toString() {
-        return "Notice{" +
-                "title='" + title + '\'' +
-                ", content='" + content + '\'' +
-                '}';
+        return "Notice{\t" + title +
+                "\t" + content
+                +"\t}";
     }
 }
 

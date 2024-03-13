@@ -27,10 +27,9 @@ public class Vas extends Stage{
 
     @Override
     public String toString() {
-        return "Vas{" +
-                "title='" + title + '\'' +
-                ", content='" + content + '\'' +
-                '}';
+        return "Vas{\t" + title +
+                "\t" + content
+                +"\t}";
     }
 }
 

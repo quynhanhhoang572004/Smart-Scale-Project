@@ -18,9 +18,8 @@ public class Timer extends Stage {
 
     @Override
     public String toString() {
-        return "Timer{" +
-                "title='" + title + '\'' +
-                ", content='" + content + '\'' +
-                '}';
+        return "Timer{\t" + title +
+                "\t" + content
+                +"\t}";
     }
 }

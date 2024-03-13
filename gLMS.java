@@ -21,10 +21,9 @@ public class gLMS extends Stage{
 
     @Override
     public String toString() {
-        return "gLMS{" +
-                "title='" + title + '\'' +
-                ", content='" + content + '\'' +
-                '}';
+        return "gLMS{\t" + title +
+                "\t" + content
+                +"\t}";
     }
 }
 

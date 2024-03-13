@@ -9,7 +9,7 @@ public class Data extends ExperimentManager{
         Scanner sc = new Scanner(System.in);
         news = new ArrayList<>();
         boolean End = false;
-
+        this.news = loadExperiments("data/experiments.txt");
         System.out.println("-----------------------Open------------------------");
         while(!End){
             System.out.println("Choose your choice: New Experiment(n), Edit Experiment(e), Results (r), Stop(s):");
