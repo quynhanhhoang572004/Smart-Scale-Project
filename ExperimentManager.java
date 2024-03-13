@@ -1,74 +1,46 @@
+import javax.management.NotificationEmitter;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ExperimentManager {
     public static void saveData(String value) throws IOException {
-        BufferedWriter writer = new BufferedWriter(new FileWriter("data/experiments.txt", false));
+        BufferedWriter writer = new BufferedWriter(new FileWriter("data/experiments.txt", true));
         writer.write(value);
         writer.newLine();
         writer.close();
     }
 
     public static ArrayList<NewExperiment> loadExperiments(String filePath) throws Exception {
-        ArrayList<NewExperiment> experiments = new ArrayList<>();
+        ArrayList<NewExperiment> newExperiments = new ArrayList<>();
         BufferedReader reader = new BufferedReader(new FileReader(filePath));
-
+        List<String> noticeLines = new ArrayList<>();
         String line;
         while ((line = reader.readLine()) != null) {
-            if (line.equals("------ Experiment Data ------")) {
-                NewExperiment experiment = new NewExperiment();
-
-                // Creator Name
-                line = reader.readLine();  // Read the next line
-                experiment.setCreatorName(line.substring(1, line.length() - 1));  // Extract name (remove brackets)
-
-                // Experiment Name
-                line = reader.readLine();
-                experiment.setExName(line.substring(1, line.length() - 1));
-
-                // Experiment Description
-                line = reader.readLine();
-                experiment.setExDescription(line.substring(1, line.length() - 1));
-
-                // Notes (optional)
-                line = reader.readLine();
-                if (line.startsWith("\t Notes: ")) {
-                    experiment.setAddNote(line.substring(9));  // Extract note content (remove prefix)
+            NewExperiment currentExperiment = null;
+            if (line.startsWith("Experiment")) {
+                String txtExperiment[] = line.split("\\s+");
+                currentExperiment = new NewExperiment(txtExperiment[1], txtExperiment[2], txtExperiment[3], txtExperiment[4]);
+                newExperiments.add(currentExperiment);
+                noticeLines.clear();
+            } else if (line.startsWith("Notice")) {
+                // Add notices to the current experiment (if any)
+                if (currentExperiment != null) {
+                    noticeLines.add(line); // Buffer notice lines until the next Experiment
                 }
-
-                // Details (Vas, gLMS, Question, Input, Timer)
-                while ((line = reader.readLine()) != null && !line.equals("------ End line ------")) {
-                    if (line.startsWith("\t *** ")) {
-                        String section = line.substring(3, line.indexOf(" ***"));  // Extract section name (e.g., Vas)
-                        while ((line = reader.readLine()) != null && !line.isEmpty()) {  // Read details until empty line
-                            String[] content = line.split(" \\| ");  // Split details by pipe delimiter
-                            switch (section) {
-                                case "Vas":
-                                    experiment.addVas(content[0], content[1]);
-                                    break;
-                                case "gLMS":
-                                    experiment.addgLMS(content[0], content[1]);
-                                    break;
-                                case "Question":
-                                    experiment.addQues(content[0], content[1]);
-                                    break;
-                                case "Input":
-                                    experiment.addInput(content[0], content[1]);
-                                    break;
-                                case "Timer":
-                                    experiment.addTimer(content[0],content[1]);
-                                    break;
-                            }
-                        }
+                // Attach buffered notices to the first experiment
+                if (!noticeLines.isEmpty() && !newExperiments.isEmpty()) {
+                    for (String noticeLine : noticeLines) {
+                        String[] txtNotice = noticeLine.split("\\s+");
+                        currentExperiment = newExperiments.get(0); // Get the first experiment
+                        currentExperiment.addNotice(txtNotice[1], txtNotice[2]);
                     }
-                }experiments.add(experiment);
+                }
             }
         }
-
-        reader.close();
-        return experiments;
+        return newExperiments;
     }
 }
-
 

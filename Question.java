@@ -20,9 +20,8 @@ public class Question extends Stage{
 
     @Override
     public String toString() {
-        return "Question{" +
-                "title='" + title + '\'' +
-                ", content='" + content + '\'' +
-                '}';
+        return "Question{\t" + title +
+                "\t" + content
+                +"\t}";
     }
 }

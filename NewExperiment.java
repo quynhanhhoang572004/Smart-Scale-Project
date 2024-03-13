@@ -36,14 +36,20 @@ public class NewExperiment extends ExperimentManager{
         quess = new ArrayList<>();
     }
 
+    public NewExperiment(String creatorName, String exName, String exDescription, String addNote) {
+        this.creatorName = creatorName;
+        this.exName = exName;
+        this.exDescription = exDescription;
+        this.addNote = addNote;
+    }
+
     @Override
     public String toString() {
-        return "NewExperiment{" +
-                "creatorName='" + creatorName + '\'' +
-                ", exName='" + exName + '\'' +
-                ", exDescription='" + exDescription + '\'' +
-                ", addNote='" + addNote + '\'' +
-                '}';
+        return "NewExperiment\t" +
+                creatorName +
+                "\t" + exName +
+                "\t" + exDescription+
+                "\t" + addNote ;
     }
 
     public void addStage(int stage) {
@@ -153,6 +159,7 @@ public class NewExperiment extends ExperimentManager{
     public void show(){
         System.out.println("\n-----------------------The edit experiment-----------------------");
         System.out.println("Creator:" + creatorName + "\n Experiment Name: " + exName);
+        System.out.println("Description:" + exDescription + "\n Additional Note: " + addNote);
         if (count > 0)
             for (Integer tr: tree){
                 int stage = tr;
