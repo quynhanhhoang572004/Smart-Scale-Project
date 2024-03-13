@@ -1,5 +1,9 @@
 NewExperiment[   thinhchau   testDA  description  not   ]
-Notice{ TitleNotice    ContentNotice    }
-
+---------------------------------------------------------
 NewExperiment[   tyrion  13/3/2024   ko co gi    note   ]
+---------------------------------------------------------
 NewExperiment[	83uyr8	8hae8fdi	d8u238	asd ]
+---------------------------------------------------------
+NewExperiment[	Chau	Csdjhh	29du19d	102di	]
+Notice{	jid	2od	}
+---------------------------------------------------------Notice{	ci	ci	}

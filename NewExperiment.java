@@ -41,15 +41,23 @@ public class NewExperiment extends ExperimentManager{
         this.exName = exName;
         this.exDescription = exDescription;
         this.addNote = addNote;
+        tree = new ArrayList<>();
+        timers = new ArrayList<>();
+        notices = new ArrayList<>();
+        inputs=new ArrayList<>();
+        vass = new ArrayList<>();
+        glmss = new ArrayList<>();
+        quess = new ArrayList<>();
     }
 
     @Override
     public String toString() {
-        return "NewExperiment\t" +
+        return "NewExperiment[\t" +
                 creatorName +
                 "\t" + exName +
                 "\t" + exDescription+
-                "\t" + addNote ;
+                "\t" + addNote +
+                "\t]";
     }
 
     public void addStage(int stage) {
@@ -213,6 +221,35 @@ public class NewExperiment extends ExperimentManager{
         this.addNote = addNote;
     }
 
+    public void setData(Data data) {
+        this.data = data;
+    }
 
+    public void setVass(ArrayList<Vas> vass) {
+        this.vass = vass;
+    }
 
+    public void setGlmss(ArrayList<gLMS> glmss) {
+        this.glmss = glmss;
+    }
+
+    public void setQuess(ArrayList<Question> quess) {
+        this.quess = quess;
+    }
+
+    public void setNotices(ArrayList<Notice> notices) {
+        this.notices = notices;
+    }
+
+    public void setInputs(ArrayList<Input> inputs) {
+        this.inputs = inputs;
+    }
+
+    public void setTimers(ArrayList<Timer> timers) {
+        this.timers = timers;
+    }
+
+    public void setTree(ArrayList<Integer> tree) {
+        this.tree = tree;
+    }
 }

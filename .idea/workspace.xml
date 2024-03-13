@@ -4,29 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="680276c9-fc57-4580-8c0c-be0dc554bbf0" name="Changes" comment="saving data - new format">
+    <list default="true" id="680276c9-fc57-4580-8c0c-be0dc554bbf0" name="Changes" comment="Read Experiment without stages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/Data.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExperimentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/Input.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewExperiment.java" beforeDir="false" afterPath="$PROJECT_DIR$/NewExperiment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notice.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Timer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Vas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/experiments.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/experiments.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gLMS.java" beforeDir="false" afterPath="$PROJECT_DIR$/gLMS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Data.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/ExperimentManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/ExperimentManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Input.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Input.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/NewExperiment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/NewExperiment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Notice.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Notice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Question.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Question.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Timer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Timer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Vas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Vas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/data/experiments.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/data/experiments.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/gLMS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/gLMS.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +32,20 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "tyri0n11"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="3b4e63b0-bfac-4c7e-b9c0-959d55cc3dec" />
+        <option name="url" value="https://github.com/quynhanhhoang572004/Smart-Scale-Project.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -125,7 +123,8 @@
       <workItem from="1710150551940" duration="1229000" />
       <workItem from="1710170894343" duration="4471000" />
       <workItem from="1710255887310" duration="729000" />
-      <workItem from="1710288276740" duration="6141000" />
+      <workItem from="1710288276740" duration="6380000" />
+      <workItem from="1710298167960" duration="2456000" />
     </task>
     <task id="LOCAL-00001" summary="test DataAccess">
       <option name="closed" value="true" />
@@ -223,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710255916076</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Read Experiment without stages">
+      <option name="closed" value="true" />
+      <created>1710295311163</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1710295311163</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +256,7 @@
     <MESSAGE value="fix bug save data" />
     <MESSAGE value="modify loading function" />
     <MESSAGE value="saving data - new format" />
-    <option name="LAST_COMMIT_MESSAGE" value="saving data - new format" />
+    <MESSAGE value="Read Experiment without stages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Read Experiment without stages" />
   </component>
 </project>
