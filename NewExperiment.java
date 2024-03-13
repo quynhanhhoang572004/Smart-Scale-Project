@@ -50,6 +50,20 @@ public class NewExperiment extends ExperimentManager{
         quess = new ArrayList<>();
     }
 
+    public NewExperiment(String creatorName, String exName, String exDescription, String addNote, ArrayList<Vas> vass, ArrayList<gLMS> glmss, ArrayList<Question> quess, ArrayList<Notice> notices, ArrayList<Input> inputs, ArrayList<Timer> timers, ArrayList<Integer> tree) {
+        this.creatorName = creatorName;
+        this.exName = exName;
+        this.exDescription = exDescription;
+        this.addNote = addNote;
+        this.vass = vass;
+        this.glmss = glmss;
+        this.quess = quess;
+        this.notices = notices;
+        this.inputs = inputs;
+        this.timers = timers;
+        this.tree = tree;
+    }
+
     @Override
     public String toString() {
         return "NewExperiment[\t" +
@@ -221,10 +235,6 @@ public class NewExperiment extends ExperimentManager{
         this.addNote = addNote;
     }
 
-    public void setData(Data data) {
-        this.data = data;
-    }
-
     public void setVass(ArrayList<Vas> vass) {
         this.vass = vass;
     }
@@ -249,7 +259,4 @@ public class NewExperiment extends ExperimentManager{
         this.timers = timers;
     }
 
-    public void setTree(ArrayList<Integer> tree) {
-        this.tree = tree;
-    }
 }

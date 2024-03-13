@@ -1,6 +1,5 @@
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 public class Data extends ExperimentManager{
 
@@ -76,6 +75,5 @@ public class Data extends ExperimentManager{
         NewExperiment newex = new NewExperiment();
         news.add(newex);
         saveData(newex.toString());
-
     }
 }
