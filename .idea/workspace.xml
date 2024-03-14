@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="680276c9-fc57-4580-8c0c-be0dc554bbf0" name="Changes" comment="read notices - temp 3">
-      <change afterPath="$PROJECT_DIR$/data/sample" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExperimentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/experiments.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/experiments.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Data.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/ExperimentManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/ExperimentManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
