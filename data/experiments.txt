@@ -33,3 +33,4 @@ gLMS{	stage5	2c	}
 Question{	stage6	f3	}
 Notice{	note1-2	32	}
 Input{	e2	2e	}
+Notice{	no1	no1	}

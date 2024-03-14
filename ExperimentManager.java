@@ -9,8 +9,8 @@ public class ExperimentManager {
         writer.close();
     }
 
-    public static ArrayList<NewExperiment> loadExperiments(String filePath) throws Exception {
-        ArrayList<NewExperiment> newExperiments = new ArrayList<>();
+    public static ArrayList<NewExperiment> loadExperiments(ArrayList<NewExperiment> newExperiments, String filePath) throws Exception {
+        //ArrayList<NewExperiment> newExperiments = new ArrayList<>();
         NewExperiment currentExperiment = null;
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
@@ -21,21 +21,27 @@ public class ExperimentManager {
                     newExperiments.add(currentExperiment);
                 } else if (currentExperiment != null) {
                     if (line.startsWith("Notice")) {
+                        currentExperiment.addStage(1);
                         String[] txtNotice = line.split("\\s+");
                         currentExperiment.addNotice(txtNotice[1], txtNotice[2]);
                     } else if (line.startsWith("Input")) {
+                        currentExperiment.addStage(2);
                         String[] txtInput = line.split("\\s+");
                         currentExperiment.addInput(txtInput[1], txtInput[2]);
                     } else if (line.startsWith("Timer")) {
+                        currentExperiment.addStage(3);
                         String[] txtTimer = line.split("\\s+");
                         currentExperiment.addTimer(txtTimer[1], txtTimer[2]);
                     } else if (line.startsWith("Vas")) {
+                        currentExperiment.addStage(4);
                         String[] txtVas = line.split("\\s+");
                         currentExperiment.addVas(txtVas[1], txtVas[2]);
                     } else if (line.startsWith("gLMS")) {
+                        currentExperiment.addStage(5);
                         String[] txtgLMS = line.split("\\s+");
                         currentExperiment.addgLMS(txtgLMS[1], txtgLMS[2]);
                     } else if (line.startsWith("Question")) {
+                        currentExperiment.addStage(6);
                         String[] txtQuestion = line.split("\\s+");
                         currentExperiment.addQues(txtQuestion[1], txtQuestion[2]);
                     } else if (line.startsWith("END")) {
