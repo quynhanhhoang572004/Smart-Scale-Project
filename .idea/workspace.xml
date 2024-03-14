@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="680276c9-fc57-4580-8c0c-be0dc554bbf0" name="Changes" comment="read notices">
+    <list default="true" id="680276c9-fc57-4580-8c0c-be0dc554bbf0" name="Changes" comment="read notices - temp 3">
+      <change afterPath="$PROJECT_DIR$/data/sample" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExperimentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/experiments.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/experiments.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Data.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/ExperimentManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/ExperimentManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/NewExperiment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/NewExperiment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/data/experiments.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/data/experiments.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="mia" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,6 +52,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -83,6 +89,36 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.main">
+    <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
+      <option name="appName" />
+      <option name="appServicePlanName" />
+      <option name="appServicePlanResourceGroup" />
+      <option name="appSettingsKey" value="d0628173-7b84-4476-b2a9-0367d71601be" />
+      <option name="artifact" />
+      <option name="debugOptions" />
+      <option name="deployment" />
+      <option name="deploymentStagingDirectoryPath" />
+      <option name="funcPath" />
+      <option name="functionHostArguments" />
+      <option name="hostJsonPath" />
+      <option name="insightsName" />
+      <option name="instrumentationKey" />
+      <option name="javaVersion" />
+      <option name="localSettingsJsonPath" />
+      <option name="moduleName" />
+      <option name="os" />
+      <option name="pricingTier" />
+      <option name="providerMap">
+        <map />
+      </option>
+      <option name="region" />
+      <option name="resourceGroup" />
+      <option name="stagingFolder" />
+      <option name="subscription" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DataAccess" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DataAccess" />
       <module name="Smart-Scale-Project" />
@@ -126,6 +162,10 @@
       <workItem from="1710288276740" duration="6380000" />
       <workItem from="1710298167960" duration="2595000" />
       <workItem from="1710301165015" duration="440000" />
+      <workItem from="1710301876762" duration="5649000" />
+      <workItem from="1710308658941" duration="598000" />
+      <workItem from="1710333258761" duration="6025000" />
+      <workItem from="1710377377458" duration="1827000" />
     </task>
     <task id="LOCAL-00001" summary="test DataAccess">
       <option name="closed" value="true" />
@@ -247,7 +287,31 @@
       <option name="project" value="LOCAL" />
       <updated>1710300768181</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="read notices - temp">
+      <option name="closed" value="true" />
+      <created>1710301900813</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1710301900813</updated>
+    </task>
+    <task id="LOCAL-00017" summary="read notices - temp 2">
+      <option name="closed" value="true" />
+      <created>1710308820035</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1710308820035</updated>
+    </task>
+    <task id="LOCAL-00018" summary="read notices - temp 3">
+      <option name="closed" value="true" />
+      <created>1710379064592</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1710379064592</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,6 +339,9 @@
     <MESSAGE value="saving data - new format" />
     <MESSAGE value="Read Experiment without stages" />
     <MESSAGE value="read notices" />
-    <option name="LAST_COMMIT_MESSAGE" value="read notices" />
+    <MESSAGE value="read notices - temp" />
+    <MESSAGE value="read notices - temp 2" />
+    <MESSAGE value="read notices - temp 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="read notices - temp 3" />
   </component>
 </project>

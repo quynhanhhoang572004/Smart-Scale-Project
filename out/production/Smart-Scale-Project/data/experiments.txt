@@ -1,3 +1,36 @@
-NewExperiment[   thinhchau   testDA  description  not   ]
-Notice{	jid	2od	}
+NewExperiment[	kahoot	kutha	test loading ]
+Notice{	stage1	ad	}
+Notice{	stage1	ad	}
+Notice{	stage1	ad	}
+Input{	stage2	we2	}
+Timer{	stage3	da	}
+Vas{	stage4	dd2	}
+gLMS{	stage5	2c	}
+Question{	stage6	f3	}
+Notice{	note1-2	32	}
+Input{	e2	2e	}
 
+NewExperiment[	kahoot	kutha	test loading ]
+Notice{	stage1	ad	}
+Notice{	stage1	ad	}
+Notice{	stage1	ad	}
+Input{	stage2	we2	}
+Timer{	stage3	da	}
+Vas{	stage4	dd2	}
+gLMS{	stage5	2c	}
+Question{	stage6	f3	}
+Notice{	note1-2	32	}
+Input{	e2	2e	}
+
+NewExperiment[	kahoot	kutha	test loading ]
+Notice{	stage1	ad	}
+Notice{	stage1	ad	}
+Notice{	stage1	ad	}
+Input{	stage2	we2	}
+Timer{	stage3	da	}
+Vas{	stage4	dd2	}
+gLMS{	stage5	2c	}
+Question{	stage6	f3	}
+Notice{	note1-2	32	}
+Input{	e2	2e	}
+Notice{	no1	no1	}
