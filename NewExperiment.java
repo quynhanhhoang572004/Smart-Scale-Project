@@ -1,4 +1,3 @@
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -50,20 +49,6 @@ public class NewExperiment extends ExperimentManager{
         quess = new ArrayList<>();
     }
 
-    public NewExperiment(String creatorName, String exName, String exDescription, String addNote, ArrayList<Vas> vass, ArrayList<gLMS> glmss, ArrayList<Question> quess, ArrayList<Notice> notices, ArrayList<Input> inputs, ArrayList<Timer> timers, ArrayList<Integer> tree) {
-        this.creatorName = creatorName;
-        this.exName = exName;
-        this.exDescription = exDescription;
-        this.addNote = addNote;
-        this.vass = vass;
-        this.glmss = glmss;
-        this.quess = quess;
-        this.notices = notices;
-        this.inputs = inputs;
-        this.timers = timers;
-        this.tree = tree;
-    }
-
     @Override
     public String toString() {
         return "NewExperiment[\t" +
@@ -94,41 +79,35 @@ public class NewExperiment extends ExperimentManager{
             }
         }
     }
-    public void addNotice(String title, String content) throws IOException {
+    public void addNotice(String title, String content) {
         Notice temp = new Notice(title,content);
-        saveData(temp.toString());
-        notices.add(temp);
+        this.notices.add(temp);
         System.out.println("Add Notice is done");
     }
-    public void addInput(String title, String content) throws IOException {
+    public void addInput(String title, String content) {
         Input temp = new Input(title, content);
-        saveData(temp.toString());
-        inputs.add(temp);
+        this.inputs.add(temp);
         System.out.println(" Add Input is done");
     }
-    public void addTimer(String title, String content) throws IOException {
+    public void addTimer(String title, String content) {
         Timer temp = new Timer(title,content);
-        saveData(temp.toString());
-        timers.add(temp);
+        this.timers.add(temp);
         System.out.println(" Add Timer stage is done");
 
     }
-    public void addVas(String title, String content) throws IOException {
+    public void addVas(String title, String content) {
         Vas temp = new Vas(title,content);
-        saveData(temp.toString());
-        vass.add(temp);
+        this.vass.add(temp);
         System.out.println("Add Vas is done");
     }
-    public void addgLMS(String title, String content) throws IOException {
+    public void addgLMS(String title, String content) {
         gLMS temp = new gLMS(title,content);
-        saveData(temp.toString());
-        glmss.add(temp);
+        this.glmss.add(temp);
         System.out.println("Add gLMS is done");
     }
-    public void addQues(String title, String content) throws IOException {
+    public void addQues(String title, String content) {
         Question temp = new Question(title,content);
-        saveData(temp.toString());
-        quess.add(temp);
+        this.quess.add(temp);
         System.out.println("Add Question is done");
     }
     public void showNotice(){
@@ -233,30 +212,6 @@ public class NewExperiment extends ExperimentManager{
 
     public void setAddNote(String addNote) {
         this.addNote = addNote;
-    }
-
-    public void setVass(ArrayList<Vas> vass) {
-        this.vass = vass;
-    }
-
-    public void setGlmss(ArrayList<gLMS> glmss) {
-        this.glmss = glmss;
-    }
-
-    public void setQuess(ArrayList<Question> quess) {
-        this.quess = quess;
-    }
-
-    public void setNotices(ArrayList<Notice> notices) {
-        this.notices = notices;
-    }
-
-    public void setInputs(ArrayList<Input> inputs) {
-        this.inputs = inputs;
-    }
-
-    public void setTimers(ArrayList<Timer> timers) {
-        this.timers = timers;
     }
 
 }

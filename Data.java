@@ -8,7 +8,6 @@ public class Data extends ExperimentManager{
         Scanner sc = new Scanner(System.in);
         news = new ArrayList<>();
         boolean End = false;
-        this.news = loadExperiments("data/experiments.txt");
         System.out.println("-----------------------Open------------------------");
         while(!End){
             System.out.println("Choose your choice: New Experiment(n), Edit Experiment(e), Results (r), Stop(s):");
@@ -37,21 +36,27 @@ public class Data extends ExperimentManager{
                     switch (stage) {
                         case 1:
                             news.get(count).addNotice(titleEn, contentEn);
+                            saveData((new Notice(titleEn, contentEn)).toString());
                             break;
                         case 2:
                             news.get(count).addInput(titleEn, contentEn);
+                            saveData((new Input(titleEn, contentEn)).toString());
                             break;
                         case 3:
                             news.get(count).addTimer(titleEn, contentEn);
+                            saveData((new Timer(titleEn, contentEn)).toString());
                             break;
                         case 4:
                             news.get(count).addVas(titleEn,contentEn);
+                            saveData((new Vas(titleEn, contentEn)).toString());
                             break;
                         case 5:
                             news.get(count).addgLMS(titleEn,contentEn);
+                            saveData((new gLMS(titleEn, contentEn)).toString());
                             break;
                         case 6:
                             news.get(count).addQues(titleEn,contentEn);
+                            saveData((new Question(titleEn, contentEn)).toString());
                             break;
                         default:
                             break;
@@ -61,6 +66,9 @@ public class Data extends ExperimentManager{
                     for (NewExperiment newex: news) {
                         newex.show();
                     }
+                    break;
+                case "l":
+                    this.news = loadExperiments("data/experiments.txt");
                     break;
                 case "s":
                     End = true;
