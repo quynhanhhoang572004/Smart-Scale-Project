@@ -1,0 +1,61 @@
+ExperimentName: Taste Screener 2019_20
+ExperimenterName: SIBG
+Version: 1
+CanBeRun: True
+BackgroundColour: #BDE7AF
+DisabledButtonColour: #0080FF
+PoststageDelay: 1
+PreStageDelay: 0
+FontColour: Black
+Font: Microsoft Sans Serif
+Size: 12
+Bold: False
+Underlined: False
+Italic: False
+RequiresBalance: False
+Experiment:
+startExperiment ("TASTE TEST", "", "Click mouse to start")
+noticestage ("Welcome!", "Thank you for agreeing to take part. To start with\, we need you to complete some simple ratings\, which will be followed by a taste test.","Ready to start", "", "False")
+noticestage("Liking ratings", "The first type of rating you complete measures how much you like different things. It uses a horizontal line anchored as 'Dislike Extremely' and 'Like Extremely'. In other words\, the left side of the line corresponds to different levels of disliking and the right side corresponds to different levels of liking. The middle of the line represents the neutral point\, that is something that you 'Neither Like or Dislike'•_
+_You can move the mouse and place your rating anywhere on the scale._
+We will start with some
+simple examples as a practice.", "Continue", "", "False") ratingsContainer ("True", "0")
+vasStage("Think about walking in the rain. How much do you like walking in the rain?"
+tas tar The about on thin bint describe on ch do you ke walking in thy ras." Pallike extremely" "like extremely" " "100", "Rating completed", "session!]", "Use the mouse to move
+vasStage("Think about watching your favourite movie. How much do you like watching your favourite movie?", "Dislike extremely", "Like extremely", "o", "100", "Rating completed", "Session[]", "Use the mouse to move the bar to the position that best describes how much do you like each activity/task.", "False", "False")
+vasstage("Think about a warm fire on a cold day. How much do you like a warm fire on a cold day?", "Dislike extremely", "Like extremely", "0", "100", "Rating completed", "Session[]", "Use the mouse to move the bar to the position that best describes how much do you like each activity/task.
+", "False", "False")
+vasstage("Think about the sound of a car alarm. How much do you like the sound of a car alarm?", "Dislike extremely", "Like extremely", "o", "100", "Rating completed", "Session[]","Use the mouse to move the bar to the position that best describes how much do you like each activity/task.", "False", "False")
+endRatingsContainer()
+noticeStage("Intensity ratings", "The second type of rating you complete measures how intense (strong) you find different sensations. It uses a vertical line anchored as "No Sensation' at the bottom and'Strongest Imaginable Sensation of Any Kind' at the top.
+***Remember*** This scale is about how intense the sensation is for you and not about how much you like it.
+Sol,
+for example, it doesn't matter if you like the sound of the rustling leaves, this is about how loud/how strong is this sound for you.
+Again we will start with some simple examples as
+a practice."
+•, "Continue", "'", "False")
+gImsStage("Think of listening to a heavy metal song with headphones on maximum volume.", "Continue", "Session[LastGImsStageResult]", "Use the mouse to move the bar to the position that best describes how strong is the sound. Note that the labels printed along the scale are there for help. You can place your ratings on a label but also anywhere else on the scalel, as well.", "False")
+
+
+
+Experiment:
+1. Creator: mia
+   Description:
+   Exname:
+   Addition notice:
+   ---> Edit stage:
+   -Notice:  {.........}
+   -Notice:  {.........}
+   -Vas: {.........}
+   -gLMS: {.........}
+2.Creator: shiba
+  Description:
+  Exname:
+  Addition notice:
+
+3.Creator: bi
+   Description:
+   Exname:
+   Addition notice:
+
+line.startwith()

@@ -68,7 +68,7 @@ public class Data extends ExperimentManager{
                     }
                     break;
                 case "l":
-                    this.news = loadExperiments("data/experiments.txt");
+                    this.news = loadExperiments(this.news,"data/experiments.txt");
                     break;
                 case "s":
                     End = true;
