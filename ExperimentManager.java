@@ -39,7 +39,6 @@ public class ExperimentManager {
                         String[] txtQuestion = line.split("\\s+");
                         currentExperiment.addQues(txtQuestion[1], txtQuestion[2]);
                     } else if (line.startsWith("END")) {
-                        saveData((new NewExperiment()).toString());
                         for (NewExperiment e : newExperiments) {
                             e.show();
                         }

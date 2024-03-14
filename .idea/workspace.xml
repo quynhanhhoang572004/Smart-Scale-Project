@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="680276c9-fc57-4580-8c0c-be0dc554bbf0" name="Changes" comment="read notices - temp 2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExperimentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExperimentManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewExperiment.java" beforeDir="false" afterPath="$PROJECT_DIR$/NewExperiment.java" afterDir="false" />
+    <list default="true" id="680276c9-fc57-4580-8c0c-be0dc554bbf0" name="Changes" comment="read notices - temp 3">
       <change beforePath="$PROJECT_DIR$/data/experiments.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/experiments.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/Data.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/ExperimentManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/ExperimentManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/NewExperiment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/NewExperiment.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Smart-Scale-Project/data/experiments.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/data/experiments.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,7 +128,7 @@
       <workItem from="1710301876762" duration="5649000" />
       <workItem from="1710308658941" duration="598000" />
       <workItem from="1710333258761" duration="6025000" />
-      <workItem from="1710377377458" duration="1490000" />
+      <workItem from="1710377377458" duration="1827000" />
     </task>
     <task id="LOCAL-00001" summary="test DataAccess">
       <option name="closed" value="true" />
@@ -273,7 +266,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710308820035</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="read notices - temp 3">
+      <option name="closed" value="true" />
+      <created>1710379064592</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1710379064592</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,6 +304,7 @@
     <MESSAGE value="read notices" />
     <MESSAGE value="read notices - temp" />
     <MESSAGE value="read notices - temp 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="read notices - temp 2" />
+    <MESSAGE value="read notices - temp 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="read notices - temp 3" />
   </component>
 </project>
