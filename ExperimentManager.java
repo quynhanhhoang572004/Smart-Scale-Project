@@ -10,7 +10,6 @@ public class ExperimentManager {
     }
 
     public static ArrayList<NewExperiment> loadExperiments(ArrayList<NewExperiment> newExperiments, String filePath) throws Exception {
-        //ArrayList<NewExperiment> newExperiments = new ArrayList<>();
         NewExperiment currentExperiment = null;
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
@@ -57,66 +56,5 @@ public class ExperimentManager {
         }
         return newExperiments;
     }
-
-        /*ArrayList<Notice> notices = new ArrayList<>();
-        ArrayList<Input> inputs = new ArrayList<>();
-        ArrayList<Timer> timers = new ArrayList<>();
-        ArrayList<Vas> vass = new ArrayList<>();
-        ArrayList<gLMS> glmss = new ArrayList<>();
-        ArrayList<Question> quess = new ArrayList<>();
-        String line;
-        int count=0;
-        while ((line = reader.readLine()) != null) {
-            if (line.startsWith("NewExperiment")) {
-                String[] txtExperiment;
-                txtExperiment = line.split("\\s+");
-                NewExperiment currentExperiment = new NewExperiment(txtExperiment[1], txtExperiment[2], txtExperiment[3], txtExperiment[4]);
-                newExperiments.add(currentExperiment);
-                count++;
-            }
-            if (line.startsWith("Notice")) {
-                String[] txtStage;
-                txtStage = line.split("\\s+");
-                notices.add(new Notice(txtStage[1], txtStage[2]));
-                newExperiments.get(count).setNotices(notices);
-
-            }
-            if (line.startsWith("Input")) {
-                String[] txtStage;
-                txtStage = line.split("\\s+");
-                inputs.add(new Input(txtStage[1], txtStage[2]));
-                newExperiments.get(count).setInputs(inputs);
-
-            }
-            if (line.startsWith("Timer")) {
-                String[] txtStage;
-                txtStage = line.split("\\s+");
-                timers.add(new Timer(txtStage[1], txtStage[2]));
-                newExperiments.get(count).setTimers(timers);
-
-            }
-            if (line.startsWith("Vas")) {
-                String[] txtStage;
-                txtStage = line.split("\\s+");
-                vass.add(new Vas(txtStage[1], txtStage[2]));
-                newExperiments.get(count).setVass(vass);
-
-            }
-            if (line.startsWith("gLMS")) {
-                String[] txtStage;
-                txtStage = line.split("\\s+");
-                glmss.add(new gLMS(txtStage[1], txtStage[2]));
-                newExperiments.get(count).setGlmss(glmss);
-
-            }
-            if (line.startsWith("Question")) {
-                String[] txtStage;
-                txtStage = line.split("\\s+");
-                quess.add(new Question(txtStage[1], txtStage[2]));
-                newExperiments.get(count).setQuess(quess);
-            }
-        }
-        return newExperiments;
-    }*/
 }
 
