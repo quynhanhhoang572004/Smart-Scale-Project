@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class NewExperiment {
+public class NewExperiment extends ExperimentManager{
     private Data data;
     private String creatorName;
     private String exName;
@@ -13,10 +13,10 @@ public class NewExperiment {
     private ArrayList<Notice> notices;
     private ArrayList<Input> inputs;
     private ArrayList<Timer>timers;
-    private int[] tree;
-    private Node root, stage1, stage2, stage3, stage4, stage5, stage6;
+    private ArrayList<Integer> tree;
     public static int count = 0;
     public NewExperiment(){
+        super();
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the Creator: ");
         setCreatorName(sc.nextLine());
@@ -26,201 +26,168 @@ public class NewExperiment {
         setExDescription(sc.nextLine());
         System.out.print("Enter the Additional Notes: ");
         setAddNote(sc.nextLine());
-        tree = new int[6];
+        tree = new ArrayList<>();
         timers = new ArrayList<>();
         notices = new ArrayList<>();
         inputs=new ArrayList<>();
         vass = new ArrayList<>();
         glmss = new ArrayList<>();
         quess = new ArrayList<>();
-        root = new Node("Experiment");
-        createList();
     }
-    public void createList(){
-        stage1 = new Node("Notice");
-        stage2 = new Node("Input");
-        stage3 = new Node("Timer");
-        stage4 = new Node("Vas");
-        stage5 = new Node("gLMS");
-        stage6 = new Node("Question");
+
+    public NewExperiment(String creatorName, String exName, String exDescription, String addNote) {
+        this.creatorName = creatorName;
+        this.exName = exName;
+        this.exDescription = exDescription;
+        this.addNote = addNote;
+        tree = new ArrayList<>();
+        timers = new ArrayList<>();
+        notices = new ArrayList<>();
+        inputs=new ArrayList<>();
+        vass = new ArrayList<>();
+        glmss = new ArrayList<>();
+        quess = new ArrayList<>();
     }
+
+    @Override
+    public String toString() {
+        return "NewExperiment[\t" +
+                creatorName +
+                "\t" + exName +
+                "\t" + exDescription+
+                "\t" + addNote +
+                "\t]";
+    }
+
     public void addStage(int stage) {
-        boolean add = true;
-        for (int i = 0 ; i < count ; i++ )
-            if (tree[i] == stage){
-                add = false;
-                break;
+        if (tree.isEmpty()) {
+            tree.add(stage);
+            count++;
+        }
+        else{
+            boolean add = true;
+            for (Integer tr : tree){
+                //for (int i = 0 ; i < count ; i++ ){
+                if (tr == stage){
+                    add = false;
+                    break;
+                }
             }
-        if (add) {
-            tree[count++] = stage;
-            switch (tree[count - 1]) {
-                case 1:
-                    root.addChild(stage1);
-                    break;
-                case 2:
-                    root.addChild(stage2);
-                    break;
-                case 3:
-                    root.addChild(stage3);
-                    break;
-                case 4:
-                    root.addChild(stage4);
-                    break;
-                case 5:
-                    root.addChild(stage5);
-                    break;
-                case 6:
-                    root.addChild(stage6);
-                    break;
-                default:
-                    break;
+            if (add) {
+                count++;
+                tree.add(stage);
             }
         }
     }
-    public void addNotice(String title, String content){
+    public void addNotice(String title, String content) {
         Notice temp = new Notice(title,content);
-        notices.add(temp);
+        this.notices.add(temp);
         System.out.println("Add Notice is done");
-        Node no = new Node("Notice " + notices.size());
-        stage1.addChild(no);
-        no.addChild("Title: " + title);
-        no.addChild("Content: "+ content);
     }
-    public void addInput(String title, String content){
+    public void addInput(String title, String content) {
         Input temp = new Input(title, content);
-        inputs.add(temp);
+        this.inputs.add(temp);
         System.out.println(" Add Input is done");
-        Node in = new Node("Input " + inputs.size());
-        stage2.addChild(in);
-        in.addChild("Title: " + title);
-        in.addChild("Content: "+ content);
     }
-    public void addTimer(String title, String content){
+    public void addTimer(String title, String content) {
         Timer temp = new Timer(title,content);
-        timers.add(temp);
+        this.timers.add(temp);
         System.out.println(" Add Timer stage is done");
-        Node ti = new Node("Timer " + timers.size());
-        stage3.addChild(ti);
-        ti.addChild("Title: " + title);
-        ti.addChild("Content: "+ content);
+
     }
     public void addVas(String title, String content) {
         Vas temp = new Vas(title,content);
-        vass.add(temp);
+        this.vass.add(temp);
         System.out.println("Add Vas is done");
-        Node va = new Node("Vas " + vass.size());
-        stage4.addChild(va);
-        va.addChild("Title: " + title);
-        va.addChild("Content: "+ content);
     }
     public void addgLMS(String title, String content) {
         gLMS temp = new gLMS(title,content);
-        glmss.add(temp);
+        this.glmss.add(temp);
         System.out.println("Add gLMS is done");
-        Node g = new Node("gLMS " + glmss.size());
-        stage5.addChild(g);
-        g.addChild("Title: " + title);
-        g.addChild("Content: "+ content);
     }
     public void addQues(String title, String content) {
         Question temp = new Question(title,content);
-        quess.add(temp);
+        this.quess.add(temp);
         System.out.println("Add Question is done");
-        Node q = new Node("Question " + quess.size());
-        stage6.addChild(q);
-        q.addChild("Title: " + title);
-        q.addChild("Content: "+ content);
-
     }
     public void showNotice(){
         if (!notices.isEmpty()){
             System.out.println("-----------------------Stage 1: Notice Stage---------------------"); // Stag 1:
-            for(Notice notice: notices){
-                //System.out.print("Title: " + notice.getTitle()+ "\nContent: "+ notice.getContent()+ "\n");
-                stage1.addChild("Title: " + notice.getTitle());
-                stage1.addChild("Content: "+ notice.getContent());
-            }
+            for(Notice notice: notices)
+                System.out.print("Title: " + notice.getTitle()+ "\nContent: "+ notice.getContent()+ "\n");
         }
     }
-    public void showInput() {
-        if (!inputs.isEmpty()) {
+
+    public void showInput(){
+        if (!inputs.isEmpty()){
             System.out.println("-----------------------Stage 2: Input Stage----------------------"); // Stag 2:
-            for (Input input : inputs) {
-                //System.out.print("Title: " + input.getTitle()+ "\nContent: "+ input.getContent()+ "\n");
-                stage2.addChild("Title: " + input.getTitle());
-                stage2.addChild("Content: " + input.getContent());
-            }
+            for(Input input: inputs)
+                System.out.print("Title: " + input.getTitle()+ "\nContent: "+ input.getContent()+ "\n");
         }
     }
+
     public void showTimer(){
         if (!timers.isEmpty()){
             System.out.println("-----------------------Stage 3: Timer Stage----------------------"); // Stag 3:
-            for(Timer timer: timers) {
-                //System.out.print("Title: " + timer.getTitle() + "\nContent: " + timer.getContent() + "\n");
-                stage3.addChild("Title: " + timer.getTitle());
-                stage3.addChild("Content: "+ timer.getContent());
-            }
+            for(Timer timer: timers)
+                System.out.print("Title: "+ timer.getTitle() + "\nContent: "+ timer.getContent()+ "\n");
         }
     }
+
     public void showVas(){
         if (!vass.isEmpty()){
             System.out.println("-----------------------Stage 4: VAS Stage------------------------"); // Stag 4:
-            for (Vas vas: vass) {
-                stage4.addChild("Title: " + vas.getTitle());
-                stage4.addChild("Content: "+ vas.getContent());
-                //System.out.print("Title: " + vas.getTitle() + "\nContent: " + vas.getContent() + "\n");
-            }
+            for (Vas vas: vass)
+                System.out.print("Title: " + vas.getTitle() + "\nContent: " + vas.getContent() + "\n");
         }
     }
+
     public void showgLms(){
-        if (!glmss.isEmpty()){
+        if (!notices.isEmpty()){
             System.out.println("-----------------------Stage 5: gLMS Stage ----------------------"); // Stage 5:
-            for (gLMS glms: glmss) {
-                stage5.addChild("Title: " + glms.getTitle());
-                stage5.addChild("Content: "+ glms.getContent());
-                //System.out.print("Title: " + glms.getTitle() + "\nContent: " + glms.getContent() + "\n");
-            }
+            for (gLMS glms: glmss)
+                System.out.print("Title: " + glms.getTitle() + "\nContent: " + glms.getContent() + "\n");
         }
     }
+
     public void showQues(){
         if (!quess.isEmpty()){
             System.out.println("-----------------------Stage 6: Question Stage ------------------"); // Stage 6:
-            for (Question ques: quess) {
-                stage6.addChild("Title: " + ques.getTitle());
-                stage6.addChild("Content: "+ ques.getContent());
-                //System.out.print("Title: " + ques.getTitle() + "\nContent: " + ques.getContent() + "\n");
-            }
+            for (Question ques: quess)
+                System.out.print("Title: " + ques.getTitle() + "\nContent: " + ques.getContent() + "\n");
         }
     }
     public void show(){
         System.out.println("\n-----------------------The edit experiment-----------------------");
-        System.out.println("Creator:" + creatorName + "\nExperiment Name: " + exName);
-//
-//        for (int i = 0 ; i < count ; i++){
-//            switch (tree[i]) {
-//                case 1:
-//                    root.addChild(stage1);
-//                    break;
-//                case 2:
-//                    root.addChild(stage2);
-//                    break;
-//                case 3:
-//                    root.addChild(stage3);
-//                    break;
-//                case 4:
-//                    root.addChild(stage4);
-//                    break;
-//                case 5:
-//                    root.addChild(stage5);
-//                    break;
-//                case 6:
-//                    root.addChild(stage6);
-//                    break;
-//                default:
-//                    break;
-//            }
-//        }
-        root.display(0);
+        System.out.println("Creator:" + creatorName + "\n Experiment Name: " + exName);
+        System.out.println("Description:" + exDescription + "\n Additional Note: " + addNote);
+        if (count > 0)
+            for (Integer tr: tree){
+                int stage = tr;
+                switch (stage) {
+                    case 1:
+                        showNotice();
+                        break;
+                    case 2:
+                        showInput();
+                        break;
+                    case 3:
+                        showTimer();
+                        break;
+                    case 4:
+                        showVas();
+                        break;
+                    case 5:
+                        showgLms();
+                        break;
+                    case 6:
+                        showQues();
+                        break;
+                    default:
+                        break;
+                }
+            }
+
         System.out.println("-------------------------------------------------------------------");
     }
     public String getCreatorName() {
@@ -229,14 +196,6 @@ public class NewExperiment {
 
     public String getExName() {
         return exName;
-    }
-
-    public String getExDescription() {
-        return exDescription;
-    }
-
-    public String getAddNote() {
-        return addNote;
     }
 
     public void setCreatorName(String creatorName) {
@@ -254,4 +213,5 @@ public class NewExperiment {
     public void setAddNote(String addNote) {
         this.addNote = addNote;
     }
+
 }

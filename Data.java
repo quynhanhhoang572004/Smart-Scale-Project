@@ -1,25 +1,26 @@
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
-
-public class Data{
+public class Data extends ExperimentManager {
 
     private ArrayList<NewExperiment> news;
-    public Data(){
+
+    public Data() throws Exception {
         Scanner sc = new Scanner(System.in);
         news = new ArrayList<>();
         boolean End = false;
         System.out.println("-----------------------Open------------------------");
-        while(!End){
+        while (!End) {
             System.out.println("Choose your choice: New Experiment(n), Edit Experiment(e), Results (r), Stop(s):");
             String choice = sc.nextLine();
             String titleEn, contentEn;
-            switch(choice){
+            switch (choice) {
                 case "n":
                     newEx();
                     break;
                 case "e":
                     int count = 1;
-                    for (NewExperiment newex: news) {
+                    for (NewExperiment newex : news) {
                         System.out.print(count + ". Creator name: " + newex.getCreatorName() + "\n  Experiment Name: " + newex.getExName() + "\n");
                         count++;
                     }
@@ -36,30 +37,40 @@ public class Data{
                     switch (stage) {
                         case 1:
                             news.get(count).addNotice(titleEn, contentEn);
+                            saveData((new Notice(titleEn, contentEn)).toString());
                             break;
                         case 2:
                             news.get(count).addInput(titleEn, contentEn);
+                            saveData((new Input(titleEn, contentEn)).toString());
                             break;
                         case 3:
                             news.get(count).addTimer(titleEn, contentEn);
+                            saveData((new Timer(titleEn, contentEn)).toString());
                             break;
                         case 4:
-                            news.get(count).addVas(titleEn,contentEn);
+                            news.get(count).addVas(titleEn, contentEn);
+                            saveData((new Vas(titleEn, contentEn)).toString());
                             break;
                         case 5:
-                            news.get(count).addgLMS(titleEn,contentEn);
+                            news.get(count).addgLMS(titleEn, contentEn);
+                            saveData((new gLMS(titleEn, contentEn)).toString());
                             break;
                         case 6:
-                            news.get(count).addQues(titleEn,contentEn);
+                            news.get(count).addQues(titleEn, contentEn);
+                            saveData((new Question(titleEn, contentEn)).toString());
                             break;
                         default:
                             break;
                     }
                     break;
                 case "r":
-                    for (NewExperiment newex: news) {
+                    for (NewExperiment newex : news) {
                         newex.show();
                     }
+                    break;
+                case "l":
+                    this.news = loadExperiments(this.news, "data/experiments.txt");
+                    this.news = loadOldExperiments(this.news, "data/data.txt");
                     break;
                 case "s":
                     End = true;
@@ -70,40 +81,10 @@ public class Data{
             }
         }
     }
-    public void newEx(){
+
+    public void newEx() throws IOException {
         NewExperiment newex = new NewExperiment();
         news.add(newex);
+        saveData(newex.toString());
     }
-//    public NewExperiment editEx(NewExperiment ex, int stage) {
-//        Scanner sc = new Scanner(System.in);
-//        String titleEn, contentEn;
-//        System.out.print("Enter the title: ");
-//        titleEn = sc.nextLine();
-//        System.out.print("Enter the content: ");
-//        contentEn = sc.nextLine();
-//        switch (stage) {
-//            case 1:
-//                ex.addNotice(titleEn, contentEn);
-//                break;
-//            case 2:
-//                ex.addInput(titleEn, contentEn);
-//                break;
-//            case 3:
-//                ex.addTimer(titleEn, contentEn);
-//                break;
-//            case 4:
-//                ex.addVas(titleEn, contentEn);
-//                break;
-//            case 5:
-//                ex.addgLMS(titleEn, contentEn);
-//                break;
-//            case 6:
-//                ex.addQues(titleEn, contentEn);
-//                break;
-//            default:
-//                break;
-//        }
-//    }
-
-
 }

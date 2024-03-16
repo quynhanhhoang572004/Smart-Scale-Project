@@ -17,4 +17,10 @@ public class Question extends Stage{
     public void setContent(String content) {
         this.content = content;
     }
+    @Override
+    public String toString() {
+        return "Question{\t" + title +
+                "\t" + content
+                +"\t}";
+    }
 }

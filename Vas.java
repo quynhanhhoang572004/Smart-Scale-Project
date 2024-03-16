@@ -1,14 +1,16 @@
 import java.util.ArrayList;
 
-public class Vas extends Stage{
+public class Vas extends Stage {
     String lowText;
     String highText;
     int lowValue;
     int highValue;
-    public Vas(String title, String content){
 
-        super(title,content);
+    public Vas(String title, String content) {
+
+        super(title, content);
     }
+
     public String getTitle() {
         return title;
     }
@@ -23,6 +25,13 @@ public class Vas extends Stage{
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    @Override
+    public String toString() {
+        return "Vas{\t" + title +
+                "\t" + content
+                + "\t}";
     }
 }
 

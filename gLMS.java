@@ -18,7 +18,14 @@ public class gLMS extends Stage{
     public void setContent(String content) {
         this.content = content;
     }
+    @Override
+    public String toString() {
+        return "glMS{\t" + title +
+                "\t" + content
+                +"\t}";
+    }
 }
+
 
 
 

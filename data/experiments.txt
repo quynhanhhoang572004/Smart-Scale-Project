@@ -1,0 +1,6 @@
+NewExperiment[	eeeeeee	eeeeeeeeeeeee	eeeeeeeeeee	eeeeeeeeeeeee	]
+NewExperiment[	e	r	l	eeeeeeee	]
+NewExperiment[	null	SIBG	null	null	]
+NewExperiment[	null	SIBG	null	null	]
+NewExperiment[	Taste Screener 2019_20	SIBG	null	null	]
+NewExperiment[	Taste Screener 2019_20	SIBG	null	null	]
