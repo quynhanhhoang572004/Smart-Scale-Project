@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="680276c9-fc57-4580-8c0c-be0dc554bbf0" name="Changes" comment="saving data - new format">
-      <change beforePath="$PROJECT_DIR$/../../../data/production/Smart-Scale-Project/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../data/production/Smart-Scale-Project/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../data/production/Smart-Scale-Project/experiments.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../data/production/Smart-Scale-Project/experiments.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../data/production/Smart-Scale-Project/production/Smart-Scale-Project/production/Smart-Scale-Project/experiments.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../data/production/Smart-Scale-Project/production/Smart-Scale-Project/production/Smart-Scale-Project/production/Smart-Scale-Project/production/Smart-Scale-Project/production/Smart-Scale-Project/experiments.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../data/production/Smart-Scale-Project/production/Smart-Scale-Project/production/Smart-Scale-Project/production/Smart-Scale-Project/production/Smart-Scale-Project/production/Smart-Scale-Project/experiments.txt" afterDir="false" />
-    </list>
+    <list default="true" id="680276c9-fc57-4580-8c0c-be0dc554bbf0" name="Changes" comment="saving data - new format" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,6 +104,7 @@
       <workItem from="1710255887310" duration="729000" />
       <workItem from="1710607447738" duration="750000" />
       <workItem from="1710614303837" duration="13000" />
+      <workItem from="1710642334235" duration="153000" />
     </task>
     <task id="LOCAL-00001" summary="test DataAccess">
       <option name="closed" value="true" />
