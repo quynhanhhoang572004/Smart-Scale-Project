@@ -34,8 +34,8 @@ public class ExperimentManager {
                         currentExperiment.addTimer(txtTimer[1], txtTimer[2]);
                     } else if (line.startsWith("vasStage")) {
                         currentExperiment.addStage(4);
-                        String[] txtVas = line.split("\\s+",2);
-                        currentExperiment.addVas(txtVas[1],"");
+                        String[] txtVas = line.split("\\s+", 2);
+                        currentExperiment.addVas(txtVas[1], "");
                     } else if (line.startsWith("glmsStage")) {
                         currentExperiment.addStage(5);
                         String[] txtgLMS = line.split("\\s+");
@@ -57,27 +57,45 @@ public class ExperimentManager {
         }
         return newExperiments;
     }
+
     public static ArrayList<NewExperiment> loadOldExperiments(ArrayList<NewExperiment> newExperiments, String filePath) throws Exception {
         NewExperiment currentExperiment = null;
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
             String currentExperimentName = null;
             String currentExperimenterName = null;
+            String titleEn=null;
+            String contentEn = null;
             while ((line = reader.readLine()) != null) {
 
                 if (line.startsWith("ExperimentName")) {
                     currentExperimentName = line.split(": ")[1].trim(); // Extract and store ExperimentName
-                } else if (line.startsWith("ExperimenterName")&& currentExperimentName != null) {
+                }
+                else if (line.startsWith("ExperimenterName") && currentExperimentName != null) {
                     String experimenterName = line.split(": ")[1].trim(); // Extract ExperimenterName
 
                     String[] txtExperiment = {currentExperimentName, experimenterName};
                     currentExperiment = new NewExperiment(txtExperiment[0], txtExperiment[1], null, null);
                     saveData(currentExperiment.toString());
                     newExperiments.add(currentExperiment);
+
+
                 }
+                else if (line.startsWith("noticeStage")) {
+                    String[] txtNotice = line.split(",");
+                    titleEn = txtNotice[0];
+                    contentEn = txtNotice[1];
+                    currentExperiment.addNotice(titleEn, contentEn);
+                    saveData((new Notice(titleEn, contentEn)).toString());
+                    currentExperiment.addStage(1);
+
+                }
+
+
+
             }
+            return newExperiments;
         }
-        return newExperiments;
     }
 }
 
