@@ -15,3 +15,51 @@ Notice{	Rinsing	Please rinse your mouth with the water provided and then expecto
 Notice{	Taste Test	Please empty Sample 720 in your mouth	}
 Notice{	Rinsing	Please rinse your mouth with the water provided and then expectorate it into the black cup.	}
 Notice{	Thank you!	That completes the taste test: please call your researcher.	}
+NewExperiment[	Taste Screener 2019_20	SIBG	null	null	]
+Notice{	Thank you for agreeing to take part. To start with	 we need you to complete some simple ratings	}
+Notice{	The first type of rating you complete measures how much you like different things. It uses a horizontal line anchored as ‘Dislike Extremely’ and ‘Like Extremely’. In other words	 the left side of the line corresponds to different levels of disliking and the right side corresponds to different levels of liking. The middle of the line represents the neutral point	}
+Vas{	Dislike extremely	Like extremely	}
+Vas{	Dislike extremely	Like extremely	}
+Vas{	Dislike extremely	Like extremely	}
+Vas{	Dislike extremely	Like extremely	}
+Notice{	The second type of rating you complete measures how intense (strong) you find different sensations. It uses a vertical line anchored as  ‘No Sensation’ at the bottom and‘Strongest Imaginable Sensation of Any Kind’ at the top.____***Remember*** This scale is about how intense the sensation is for you and not about how much you like it. So	 for example	}
+glMS{	Continue	Session[LastGlmsStageResult]	}
+glMS{	Continue	Session[LastGlmsStageResult]	}
+Notice{	Before we go to the  taste test	 we need you to complete some simple mood ratings.____Use the mouse to move the bar to the position that best describes how you feel	}
+Vas{	Not at all hungry	Extremely hungry	}
+Vas{	Not at all full	Extremely full	}
+Vas{	Not at all thirsty	Extremely thirsty	}
+Vas{	Not at all happy	Extremely happy	}
+Vas{	Not at all anxious	Extremely anxious	}
+Vas{	Not at all tired	Extremely tired	}
+Notice{	For the taste test	 samples of simple solutions are presented for you to evaluate. Note you will complete one set of ratings	}
+Notice{	Please empty Sample 667 in your mouth	 swirl it around while counting to 10	}
+Vas{	Dislike extremely	Like extremely	}
+glMS{	Next	Session[]	}
+glMS{	Next	Session[]	}
+glMS{	Next	Session[]	}
+glMS{	Next	Session[]	}
+Notice{	Please rinse your mouth with the water provided and then expectorate it into the black cup.	Continue	}
+Notice{	Please empty Sample 312 in your mouth	 swirl it around while counting to 10	}
+Vas{	Dislike extremely	Like extremely	}
+glMS{	Next	Session[]	}
+glMS{	Next	Session[]	}
+glMS{	Next	Session[]	}
+glMS{	Next	Session[]	}
+Notice{	Please rinse your mouth with the water provided and then expectorate it into the black cup.	Continue	}
+Notice{	Please move to the second part of the Solutions Taste Test.	Continue	}
+Notice{	Please empty Sample 265 in your mouth	 swirl it around while counting to 10	}
+Vas{	Dislike extremely	Like extremely	}
+glMS{	Next	Session[]	}
+glMS{	Next	Session[]	}
+glMS{	Next	Session[]	}
+glMS{	Next	Session[]	}
+Notice{	Please rinse your mouth with the water provided and then expectorate it into the black cup.	Continue	}
+Notice{	Please empty Sample 720 in your mouth	 swirl it around while counting to 10	}
+Vas{	Dislike extremely	Like extremely	}
+glMS{	Next	Session[]	}
+glMS{	Next	Session[]	}
+glMS{	Next	Session[]	}
+glMS{	Next	Session[]	}
+Notice{	Please rinse your mouth with the water provided and then expectorate it into the black cup.	Continue	}
+Notice{	That completes the taste test: please call your researcher.	X	}

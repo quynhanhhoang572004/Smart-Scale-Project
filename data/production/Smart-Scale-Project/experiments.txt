@@ -1,1 +1,17 @@
 NewExperiment[	Taste Screener 2019_20	SIBG	null	null	]
+NewExperiment[	Taste Screener 2019_20	SIBG	null	null	]
+Notice{	Welcome!	Thank you for agreeing to take part. To start with	}
+Notice{	Liking ratings	The first type of rating you complete measures how much you like different things. It uses a horizontal line anchored as ‘Dislike Extremely’ and ‘Like Extremely’. In other words	}
+Notice{	Intensity ratings	The second type of rating you complete measures how intense (strong) you find different sensations. It uses a vertical line anchored as  ‘No Sensation’ at the bottom and‘Strongest Imaginable Sensation of Any Kind’ at the top.____***Remember*** This scale is about how intense the sensation is for you and not about how much you like it. So	}
+Notice{	Mood ratings	Before we go to the  taste test	}
+Notice{	Taste Test	For the taste test	}
+Notice{	Taste Test	Please empty Sample 667 in your mouth	}
+Notice{	Rinsing	Please rinse your mouth with the water provided and then expectorate it into the black cup.	}
+Notice{	Taste Test	Please empty Sample 312 in your mouth	}
+Notice{	Rinsing	Please rinse your mouth with the water provided and then expectorate it into the black cup.	}
+Notice{	Waiting time is over!	Please move to the second part of the Solutions Taste Test.	}
+Notice{	Taste Test	Please empty Sample 265 in your mouth	}
+Notice{	Rinsing	Please rinse your mouth with the water provided and then expectorate it into the black cup.	}
+Notice{	Taste Test	Please empty Sample 720 in your mouth	}
+Notice{	Rinsing	Please rinse your mouth with the water provided and then expectorate it into the black cup.	}
+Notice{	Thank you!	That completes the taste test: please call your researcher.	}

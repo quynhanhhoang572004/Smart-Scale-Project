@@ -11,7 +11,7 @@ public class Data extends ExperimentManager {
         boolean End = false;
         System.out.println("-----------------------Open------------------------");
         while (!End) {
-            System.out.println("Choose your choice: New Experiment(n), Edit Experiment(e), Results (r), Stop(s):");
+            System.out.println("Choose your choice: New Experiment(n), Edit Experiment(e), Results (r), Stop(s), Load(l):");
             String choice = sc.nextLine();
             String titleEn, contentEn;
             switch (choice) {
