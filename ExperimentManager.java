@@ -1,6 +1,7 @@
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Timer;
 
 public class ExperimentManager {
     public static void saveData(String value) throws IOException {
@@ -83,13 +84,60 @@ public class ExperimentManager {
                 }
                 else if (line.startsWith("noticeStage")) {
                     String[] txtNotice = line.split(",");
-                    titleEn = txtNotice[0];
-                    contentEn = txtNotice[1];
+                    titleEn = txtNotice[1].replace("\\","").replace("\"","");;
+                    contentEn = txtNotice[2].replace("\\","").replace("\"","");;
                     currentExperiment.addNotice(titleEn, contentEn);
                     saveData((new Notice(titleEn, contentEn)).toString());
                     currentExperiment.addStage(1);
 
                 }
+                else if (line.startsWith("glmsStage")) {
+                    String[] txtNotice = line.split(",");
+                    titleEn = txtNotice[1].replace("\\","").replace("\"","");;
+                    contentEn = txtNotice[2].replace("\\","").replace("\"","");;
+                    currentExperiment.addgLMS(titleEn, contentEn);
+                    saveData((new gLMS(titleEn, contentEn)).toString());
+                    currentExperiment.addStage(5);
+
+                }
+                else if (line.startsWith("vasStage")) {
+                    String[] txtNotice = line.split(",");
+                    titleEn = txtNotice[1].replace("\\","").replace("\"","");
+                    contentEn = txtNotice[2].replace("\\","").replace("\"","");;
+                    currentExperiment.addVas(titleEn, contentEn);
+                    saveData((new Vas(titleEn, contentEn)).toString());
+                    currentExperiment.addStage(4);
+
+                }
+                else if (line.startsWith("Input")) {
+                    String[] txtNotice = line.split(",");
+                    titleEn = txtNotice[1].replace("\\","").replace("\"","");
+                    contentEn = txtNotice[2].replace("\\","").replace("\"","");;
+                    currentExperiment.addInput(titleEn, contentEn);
+                    saveData((new Input(titleEn, contentEn)).toString());
+                    currentExperiment.addStage(2);
+
+                }
+//                else if (line.startsWith("Timer")) {
+//                    String[] txtNotice = line.split(",");
+//                    titleEn = txtNotice[1].replace("\\","").replace("\"","");
+//                    contentEn = txtNotice[2].replace("\\","").replace("\"","");;
+//                    currentExperiment.addTimer(titleEn, contentEn);
+//                    saveData((new Timer(titleEn, contentEn)).toString());
+//                    currentExperiment.addStage(3);
+//
+//                }
+                else if (line.startsWith("Question")) {
+                    String[] txtNotice = line.split(",");
+                    titleEn = txtNotice[1].replace("\\","").replace("\"","");
+                    contentEn = txtNotice[2].replace("\\","").replace("\"","");;
+                    currentExperiment.addQues(titleEn, contentEn);
+                    saveData((new Question(titleEn, contentEn)).toString());
+                    currentExperiment.addStage(6);
+
+                }
+
+
 
 
 
