@@ -58,6 +58,10 @@ public class NewExperiment extends ExperimentManager{
                 "\t" + addNote +
                 "\t]";
     }
+    public String OldData(){
+        return "ExperimentName:\t" + exName + "\n"
+                + "ExperimenterName:" + creatorName;
+    }
 
     public void addStage(int stage) {
         if (tree.isEmpty()) {

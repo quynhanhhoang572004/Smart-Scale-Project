@@ -24,6 +24,9 @@ public class Notice extends Stage{
                 "\t" + content
                 +"\t}";
     }
+    public String OldData(){
+        return "noticeStage(\""+ title +"\", " +"\"" + content + "\")";
+    }
 }
 
 

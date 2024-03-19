@@ -21,6 +21,9 @@ public class Timer extends Stage {
                 "\t" + content
                 +"\t}";
     }
+    public String OldData(){
+        return "Timer(\""+ title +"\", " +"\"" + content + "\")";
+    }
 }
 
 

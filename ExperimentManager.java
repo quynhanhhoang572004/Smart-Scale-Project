@@ -10,6 +10,12 @@ public class ExperimentManager {
         writer.newLine();
         writer.close();
     }
+    public static void saveOldData(String value) throws IOException {
+        BufferedWriter writer = new BufferedWriter(new FileWriter("data/OldExperiments.txt", true));
+        writer.write(value);
+        writer.newLine();
+        writer.close();
+    }
 
     public static ArrayList<NewExperiment> loadExperiments(ArrayList<NewExperiment> newExperiments, String filePath) throws Exception {
         NewExperiment currentExperiment = null;
@@ -77,7 +83,7 @@ public class ExperimentManager {
 
                     String[] txtExperiment = {currentExperimentName, experimenterName};
                     currentExperiment = new NewExperiment(txtExperiment[0], txtExperiment[1], null, null);
-                    saveData(currentExperiment.toString());
+                    saveOldData(currentExperiment.OldData());
                     newExperiments.add(currentExperiment);
 
 
@@ -87,7 +93,7 @@ public class ExperimentManager {
                     titleEn = txtNotice[1].replace("\\","").replace("\"","");;
                     contentEn = txtNotice[2].replace("\\","").replace("\"","");;
                     currentExperiment.addNotice(titleEn, contentEn);
-                    saveData((new Notice(titleEn, contentEn)).toString());
+                    saveOldData((new Notice(titleEn, contentEn)).OldData());
                     currentExperiment.addStage(1);
 
                 }
@@ -96,7 +102,7 @@ public class ExperimentManager {
                     titleEn = txtNotice[1].replace("\\","").replace("\"","");;
                     contentEn = txtNotice[2].replace("\\","").replace("\"","");;
                     currentExperiment.addgLMS(titleEn, contentEn);
-                    saveData((new gLMS(titleEn, contentEn)).toString());
+                    saveOldData((new gLMS(titleEn, contentEn)).OldData());
                     currentExperiment.addStage(5);
 
                 }
@@ -105,7 +111,7 @@ public class ExperimentManager {
                     titleEn = txtNotice[1].replace("\\","").replace("\"","");
                     contentEn = txtNotice[2].replace("\\","").replace("\"","");;
                     currentExperiment.addVas(titleEn, contentEn);
-                    saveData((new Vas(titleEn, contentEn)).toString());
+                    saveOldData((new gLMS(titleEn, contentEn)).OldData());
                     currentExperiment.addStage(4);
 
                 }
@@ -114,7 +120,7 @@ public class ExperimentManager {
                     titleEn = txtNotice[1].replace("\\","").replace("\"","");
                     contentEn = txtNotice[2].replace("\\","").replace("\"","");;
                     currentExperiment.addInput(titleEn, contentEn);
-                    saveData((new Input(titleEn, contentEn)).toString());
+                    saveOldData((new Input(titleEn, contentEn)).OldData());
                     currentExperiment.addStage(2);
 
                 }
@@ -132,7 +138,7 @@ public class ExperimentManager {
                     titleEn = txtNotice[1].replace("\\","").replace("\"","");
                     contentEn = txtNotice[2].replace("\\","").replace("\"","");;
                     currentExperiment.addQues(titleEn, contentEn);
-                    saveData((new Question(titleEn, contentEn)).toString());
+                    saveOldData((new Question(titleEn, contentEn)).OldData());
                     currentExperiment.addStage(6);
 
                 }

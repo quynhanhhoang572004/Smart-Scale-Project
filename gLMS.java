@@ -24,6 +24,9 @@ public class gLMS extends Stage{
                 "\t" + content
                 +"\t}";
     }
+    public String OldData(){
+        return "glmsStage(\""+ title +"\", " +"\"" + content + "\")";
+    }
 }
 
 

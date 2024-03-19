@@ -33,5 +33,8 @@ public class Vas extends Stage {
                 "\t" + content
                 + "\t}";
     }
+    public String OldData(){
+        return "vasStage(\""+ title +"\", " +"\"" + content + "\")";
+    }
 }
 

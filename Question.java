@@ -23,4 +23,7 @@ public class Question extends Stage{
                 "\t" + content
                 +"\t}";
     }
+    public String OldData(){
+        return "Question(\""+ title +"\", " +"\"" + content + "\")";
+    }
 }

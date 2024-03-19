@@ -25,4 +25,7 @@ public class Input extends Stage {
                 "\t" + content
                 +"\t}";
     }
+    public String OldData(){
+        return "Input(\""+ title +"\", " +"\"" + content + "\")";
+    }
 }
