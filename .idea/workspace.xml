@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="680276c9-fc57-4580-8c0c-be0dc554bbf0" name="Changes" comment="read notices - temp 4">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14-Mar-24_9_03_AM_[Changes]/ExperimentManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14-Mar-24_9_03_AM_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14-Mar-24_9_03_AM_[Changes]1/ExperimentManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14-Mar-24_9_03_AM_[Changes]1/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14-Mar-24_9_03_AM__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14-Mar-24_9_03_AM__Changes_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/.idea/shelf/Uncommitted_changes_before_Update_at_14-Mar-24_9_03_AM_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/.idea/shelf/Uncommitted_changes_before_Update_at_14-Mar-24_9_03_AM_[Changes]1/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/.idea/shelf/Uncommitted_changes_before_Update_at_14-Mar-24_9_03_AM__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Smart-Scale-Project/.idea/shelf/Uncommitted_changes_before_Update_at_14-Mar-24_9_03_AM__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14-Mar-24_9_03_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14-Mar-24_9_03_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14-Mar-24_9_03_AM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14-Mar-24_9_03_AM__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,6 +160,7 @@
       <workItem from="1710308658941" duration="598000" />
       <workItem from="1710333258761" duration="6025000" />
       <workItem from="1710377377458" duration="1827000" />
+      <workItem from="1710836426337" duration="53000" />
     </task>
     <task id="LOCAL-00001" summary="test DataAccess">
       <option name="closed" value="true" />
